@@ -32,21 +32,26 @@ class Menu:
         image = pygame.transform.scale(image, (largeur_image, hauteur_image)) 
         return image
     
-    def rounded_rect(self, surface, rect, color, radius=10):
+    def rounded_rect(self, surface, rect, color, radius=20):
         """ Draw a rectangle with rounded corners """
         rect = pygame.Rect(rect)
-        circle = pygame.Surface([radius * 2, radius * 2])
-        pygame.draw.ellipse(circle, (0, 0, 0, 0), circle.get_rect(), 0)
-        pygame.draw.ellipse(circle, color, circle.get_rect(), 0)
-        circle.set_colorkey((0, 0, 0, 0))
+        color_surface = pygame.Surface(rect.size, pygame.SRCALPHA)
+        color_surface.fill(color)
+        tmp_rect = pygame.Rect(0, 0, radius, radius)
+        corner = pygame.Surface(tmp_rect.size, pygame.SRCALPHA)
 
-        surface.blit(pygame.transform.scale(circle, (radius, radius)), (rect.left, rect.top))
-        surface.blit(pygame.transform.scale(circle, (radius, radius)), (rect.right - radius - 1, rect.top))
-        surface.blit(pygame.transform.scale(circle, (radius, radius)), (rect.left, rect.bottom - radius - 1))
-        surface.blit(pygame.transform.scale(circle, (radius, radius)), (rect.right - radius - 1, rect.bottom - radius - 1))
+        pygame.draw.ellipse(corner, (0, 0, 0), tmp_rect)
+        corner = pygame.transform.scale(corner, (radius, radius))
 
-        surface.fill(color, rect.inflate(-radius * 2, 0))
-        surface.fill(color, rect.inflate(0, -radius * 2))
+        for pos in ((0, 0), (rect.width - radius - 1, 0), (0, rect.height - radius - 1),
+                    (rect.width - radius - 1, rect.height - radius - 1)):
+            color_surface.blit(corner, pos)
+
+        color_surface.fill((0, 0, 0), (radius, 0, rect.width - radius * 2, rect.height))
+        color_surface.fill((0, 0, 0), (0, radius, rect.width, rect.height - radius * 2))
+
+        surface.blit(color_surface, rect.topleft)
+
 
     def cases(self, longueur, largeur, couleur, texte):
         surface = pygame.Surface((200, 50), pygame.SRCALPHA)  # Crée une surface transparente
