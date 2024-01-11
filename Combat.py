@@ -58,3 +58,63 @@ Pok8 = Pokemon("Herbizarre", "Plante", "Poison", 60, 62, 63, 80, 80, 60, Faux_Co
 Pok9 = Pokemon("Florizarre", "Plante", "Poison", 187, 147, 148, 167, 167, 145, Canon_graine, Bombe_Beurk, Damoclès,
                Coupe_feuille)
 
+
+def PokAttack(pok1, pok2, move):
+    critChance = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5]
+    randDamage = [85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+    STABdmg = 1
+    gamestate = 0
+    if move.typ == pok1.type1:
+        STABdmg = 1.5
+    elif move.typ == pok1.type2:
+        STABdmg = 1.5
+    else:
+        pass
+
+    dmg = move.pwr
+
+    if move.form == "Physique":
+        damage = (((22 * dmg * (pok1.atk / pok2.df)) / 50) + 2) * random.choice(critChance) * (
+            random.choice(randDamage)) * STABdmg
+    else:
+        damage = (((22 * dmg * (pok1.spatk / pok2.spdf)) / 50) + 2) * random.choice(critChance) * (
+            random.choice(randDamage)) * STABdmg
+
+    if move.typ == "Feu" and pok2.type1 == "Eau":
+        damage *= 0.5
+    if move.typ == "Feu" and pok2.type1 == "Plante":
+        damage *= 1.8
+    if move.typ == "Feu" and pok2.type1 == "Feu":
+        damage *= 0.5
+    if move.typ == "Plante" and pok2.type1 == "Eau":
+        damage *= 1.8
+    if move.typ == "Plante" and pok2.type1 == "Vol":
+        damage *= 0.5
+    if move.typ == "Plante" and pok2.type1 == "Plante":
+        damage *= 0.5
+    if move.typ == "Plante" and pok2.type1 == "Feu":
+        damage *= 0.5
+    if move.typ == "Eau" and pok2.type1 == "Eau":
+        damage *= 0.5
+    if move.typ == "Eau" and pok2.type1 == "Plante":
+        damage *= 0.5
+    if move.typ == "Eau" and pok2.type1 == "Feu":
+        damage *= 1.8
+    if move.typ == "Vol" and pok2.type1 == "Plante":
+        damage *= 1.8
+
+    damage = round(damage, 0)
+    damage = int(damage / 100)
+
+    print(f'{pok1.name} a utilisé {move.name}')
+    pok2.hp -= damage
+    print(f"{pok2.name} prend {damage} de dégat !")
+
+    if pok2.hp <= 0:
+        gamestate = 1
+        pok2.hp = 0
+
+    print(f'{pok2.name} a {pok2.hp} HP restant. \n')
+
+    return gamestate
+
