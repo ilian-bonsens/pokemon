@@ -1,0 +1,231 @@
+{
+  "pokemon": [
+    {
+      "name": "Bulbizarre",
+      "type": [
+        "Plante",
+        "Poison"
+      ],
+      "hp": 45,
+      "attack": 49,
+      "defense": 49,
+      "speed": 45,
+      "attacks": [
+        {
+          "name": "charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Fouet Lianes",
+          "type": "Plante",
+          "power": 45
+        }
+      ]
+    },
+    {
+      "name": "Herbizarre",
+      "type": [
+        "Plante",
+        "Poison"
+      ],
+      "hp": 60,
+      "attack": 62,
+      "defense": 63,
+      "speed": 60,
+      "attacks": [
+        {
+          "name": "Tranch’Herbe",
+          "type": "Plante",
+          "power": 55
+        },
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        }
+      ]
+    },
+    {
+      "name": "Florizarre",
+      "type": [
+        "Plante",
+        "Poison"
+      ],
+      "hp": 80,
+      "attack": 82,
+      "defense": 83,
+      "speed": 80,
+      "attacks": [
+        {
+          "name": "Tempête_Florale",
+          "type": "Plante",
+          "power": 90
+        },
+        {
+          "name": "Lance-Soleil",
+          "type": "Plante",
+          "power": 120
+        }
+      ]
+    },
+    {
+      "name": "Salamèche",
+      "type": [
+        "Feu"
+      ],
+      "hp": 39,
+      "attack": 52,
+      "defense": 43,
+      "speed": 65,
+      "attacks": [
+        {
+          "name": "Griffe",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Flammèche",
+          "type": "Feu",
+          "power": 40
+        }
+      ]
+    },
+    {
+      "name": "Reptincel",
+      "type": [
+        "Feu"
+      ],
+      "hp": 58,
+      "attack": 64,
+      "defense": 58,
+      "speed": 80,
+      "attacks": [
+        {
+          "name": "Griffe",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Crocs Feu",
+          "type": "Feu",
+          "power": 65
+        }
+      ]
+    },
+    {
+      "name": "Dracaufeu",
+      "type": [
+        "Feu"
+      ],
+      "hp": 78,
+      "attack": 84,
+      "defense": 78,
+      "speed": 100,
+      "attacks": [
+        {
+          "name": "Lame_d’Air",
+          "type": "vol",
+          "power": 75
+        },
+        {
+          "name": "Lance-Flammes",
+          "type": "Feu",
+          "power": 90
+        }
+      ]
+    },
+    {
+      "name": "Carapuce",
+      "type": [
+        "Eau"
+      ],
+      "hp": 44,
+      "attack": 48,
+      "defense": 65,
+      "speed": 43,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Pistolet_à_O",
+          "type": "Eau",
+          "power": 40
+        }
+      ]
+    },
+    {
+      "name": "Carapuce",
+      "type": [
+        "Eau"
+      ],
+      "hp": 44,
+      "attack": 48,
+      "defense": 65,
+      "speed": 43,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Pistolet_à_O",
+          "type": "Eau",
+          "power": 40
+        }
+      ]
+    },
+    {
+      "name": "Carabaffe",
+      "type": [
+        "Eau"
+      ],
+      "hp": 59,
+      "attack": 63,
+      "defense": 80,
+      "speed": 58,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Vibraqua",
+          "type": "Eau",
+          "power": 60
+        }
+      ]
+    },
+    {
+      "name": "Tortank",
+      "type": [
+        "Eau"
+      ],
+      "hp": 79,
+      "attack": 83,
+      "defense": 100,
+      "speed": 78,
+      "attacks": [
+        {
+          "name": "Hydro-Queue",
+          "type": "Eau",
+          "power": 90
+        },
+        {
+          "name": "Hydrocanon",
+          "type": "Eau",
+          "power": 110
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
