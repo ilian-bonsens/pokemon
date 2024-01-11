@@ -8,7 +8,9 @@
         "attaque_spe": 60,
         "defense_spe": 50,
         "vitesse": 65,
-        "attaques": ["Flammeche", "Charge", "Damoclès", "Crocs_Feu"]
+        "sprite-face": "sprites-pokemon/charmander-face.png",
+        "sprite-dos": "sprites-pokemon/charmander-back.png",
+        "cris": "cris-pokemon/charmander.mp3"
     },
     "Reptincel": {
         "element": "Feu",
@@ -19,7 +21,9 @@
         "attaque_spe": 80,
         "defense_spe": 65,
         "vitesse": 80,
-        "attaques": ["Flammeche", "Charge", "Damoclès", "Crocs_Feu"]
+        "sprite-face": "sprites-pokemon/charmeleon-face.png",
+        "sprite-dos": "sprites-pokemon/charmeleon-back.png",
+        "cris": "cris-pokemon/charmeleon.mp3"
     },
     "Dracaufeu": {
         "element": "Feu",
@@ -30,7 +34,10 @@
         "attaque_spe": 177,
         "defense_spe": 150,
         "vitesse": 167,
-        "attaques": ["Lance flamme", "Lame_dair", "Boutefeu", "Tranche"]
+        "sprite-face": "sprites-pokemon/charizard-face.png",
+        "sprite-dos": "sprites-pokemon/charizard-back.png",
+        "cris": "cris-pokemon/charizard.mp3"
+
     },
     "Carapuce": {
             "element": "Eau",
@@ -41,7 +48,9 @@
             "attaque_spe": 50,
             "defense_spe": 64,
             "vitesse": 43,
-            "attaques": ["Pistolet_a_O", "Morsure", "Charge", "Damoclès"]
+            "sprite-face": "sprites-pokemon/squirtle-face.png",
+            "sprite-dos": "sprites-pokemon/squirtle-back.png",
+            "cris": "cris-pokemon/squirtle.mp3"
     },
     "Carabaffe": {
         "element": "Eau",
@@ -52,7 +61,9 @@
         "attaque_spe": 65,
         "defense_spe": 80,
         "vitesse": 58,
-        "attaques": ["Pistolet_a_O", "Morsure", "Charge", "Damoclès"]
+        "sprite-face": "sprites-pokemon/wartortle-face.png",
+        "sprite-dos": "sprites-pokemon/wartortle-back.png",
+        "cris": "cris-pokemon/wartortle.mp3"
     },
     "Tortank": {
         "element": "Eau",
@@ -63,7 +74,9 @@
         "attaque_spe": 150,
         "defense_spe": 172,
         "vitesse": 143,
-        "attaques": ["Vibraqua", "Hydro_queue", "Morsure", "Tour_rapide"]
+        "sprite-face": "sprites-pokemon/blastoise-face.png",
+        "sprite-dos": "sprites-pokemon/blastoise-back.png",
+        "cris": "cris-pokemon/blastoise.mp3"
     },
     "Bulbizarre": {
         "element": "Plante",
@@ -74,7 +87,9 @@
         "attaque_spe": 65,
         "defense_spe": 65,
         "vitesse": 45,
-        "attaques": ["Faux_Coup", "Fouet_Lianes", "Damoclès", "Charge"]
+        "sprite-face": "sprites-pokemon/bulbasaur-face.png",
+        "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
+        "cris": "cris-pokemon/bulbasaur.mp3"
     },
     "Herbizarre": {
         "element": "Plante",
@@ -85,7 +100,9 @@
         "attaque_spe": 80,
         "defense_spe": 80,
         "vitesse": 60,
-        "attaques": ["Faux_Coup", "Fouet_Lianes", "Damoclès", "Charge"]
+        "sprite-face": "sprites-pokemon/ivysaur-face.png",
+        "sprite-dos": "sprites-pokemon/ivysaur-back.png",
+        "cris": "cris-pokemon/ivysaur.mp3"
     },
     "Florizarre": {
         "element": "Plante",
@@ -96,205 +113,8 @@
         "attaque_spe": 167,
         "defense_spe": 167,
         "vitesse": 145,
-        "attaques": ["Canon_graine", "Bombe_Beurk", "Damoclès", "Coupe_feuille"]
-    },
-    "Germignon": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 45,
-        "attaque": 49,
-        "defense": 65,
-        "attaque_spe": 49,
-        "defense_spe": 65,
-        "vitesse": 45,
-        "attaques": ["À définir"]
-    },
-    "Macronium": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 60,
-        "attaque": 62,
-        "defense": 80,
-        "attaque_spe": 63,
-        "defense_spe": 80,
-        "vitesse": 60,
-        "attaques": ["À définir"]
-    },
-    "Meganium": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 80,
-        "attaque": 82,
-        "defense": 100,
-        "attaque_spe": 83,
-        "defense_spe": 100,
-        "vitesse": 80,
-        "attaques": ["À définir"]
-    },
-    "Hericendre": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 39,
-        "attaque": 52,
-        "defense": 43,
-        "attaque_spe": 60,
-        "defense_spe": 50,
-        "vitesse": 65,
-        "attaques": ["À définir"]
-    },
-    "Feurisson": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 58,
-        "attaque": 64,
-        "defense": 58,
-        "attaque_spe": 80,
-        "defense_spe": 65,
-        "vitesse": 80,
-        "attaques": ["À définir"]
-    },
-    "Typhlosion": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 78,
-        "attaque": 84,
-        "defense": 78,
-        "attaque_spe": 109,
-        "defense_spe": 85,
-        "vitesse": 100,
-        "attaques": ["À définir"]
-    },
-    "Kaiminus": {
-        "element": "Eau",
-        "element2": null,
-        "pv": 50,
-        "attaque": 65,
-        "defense": 64,
-        "attaque_spe": 44,
-        "defense_spe": 48,
-        "vitesse": 43,
-        "attaques": ["À définir"]
-    },
-    "Crocrodil": {
-        "element": "Eau",
-        "element2": null,
-        "pv": 65,
-        "attaque": 80,
-        "defense": 80,
-        "attaque_spe": 59,
-        "defense_spe": 63,
-        "vitesse": 58,
-        "attaques": ["À définir"]
-    },
-    "Aligatueur": {
-        "element": "Eau",
-        "element2": null,
-        "pv": 85,
-        "attaque": 105,
-        "defense": 100,
-        "attaque_spe": 79,
-        "defense_spe": 83,
-        "vitesse": 78,
-        "attaques": ["À définir"]
-    },
-    "Arcko": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 40,
-        "attaque": 45,
-        "defense": 35,
-        "attaque_spe": 65,
-        "defense_spe": 55,
-        "vitesse": 70,
-        "attaques": ["À définir"]
-    },
-    "Massko": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 50,
-        "attaque": 65,
-        "defense": 45,
-        "attaque_spe": 85,
-        "defense_spe": 65,
-        "vitesse": 95,
-        "attaques": ["À définir"]
-    },
-    "Jungko": {
-        "element": "Plante",
-        "element2": null,
-        "pv": 70,
-        "attaque": 85,
-        "defense": 65,
-        "attaque_spe": 105,
-        "defense_spe": 85,
-        "vitesse": 120,
-        "attaques": ["À définir"]
-    },
-    "Poussifeu": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 45,
-        "attaque": 60,
-        "defense": 40,
-        "attaque_spe": 70,
-        "defense_spe": 50,
-        "vitesse": 45,
-        "attaques": ["À définir"]
-    },
-    "Galifeu": {
-        "element": "Feu",
-        "element2": "Combat",
-        "pv": 60,
-        "attaque": 85,
-        "defense": 60,
-        "attaque_spe": 85,
-        "defense_spe": 60,
-        "vitesse": 55,
-        "attaques": ["À définir"]
-    },
-    "Brasegali": {
-        "element": "Feu",
-        "element2": "Combat",
-        "pv": 80,
-        "attaque": 120,
-        "defense": 70,
-        "attaque_spe": 110,
-        "defense_spe": 70,
-        "vitesse": 80,
-        "attaques": ["À définir"]
-    },
-    "Gobou": {
-        "element": "Eau",
-        "element2": "Sol",
-        "pv": 50,
-        "attaque": 70,
-        "defense": 50,
-        "attaque_spe": 50,
-        "defense_spe": 50,
-        "vitesse": 40,
-        "attaques": ["À définir"]
-    },
-    "Flobio": {
-        "element": "Eau",
-        "element2": "Sol",
-        "pv": 70,
-        "attaque": 85,
-        "defense": 70,
-        "attaque_spe": 60,
-        "defense_spe": 70,
-        "vitesse": 50,
-        "attaques": ["À définir"]
-    },
-    "Lagron": {
-        "element": "Eau",
-        "element2": "Sol",
-        "pv": 100,
-        "attaque": 110,
-        "defense": 90,
-        "attaque_spe": 85,
-        "defense_spe": 90,
-        "vitesse": 60,
-        "attaques": ["À définir"]
+        "sprite-face": "sprites-pokemon/venusaur-face.png",
+        "sprite-dos": "sprites-pokemon/venusaur-back.png",
+        "cris": "cris-pokemon/venusaur.mp3"
     }
 }
-
