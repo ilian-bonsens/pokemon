@@ -2,10 +2,7 @@
   "pokemon": [
     {
       "name": "Bulbizarre",
-      "type": [
-        "Plante",
-        "Poison"
-      ],
+      "type": ["Plante", "Poison"],
       "hp": 45,
       "attack": 49,
       "defense": 49,
@@ -17,7 +14,7 @@
           "power": 40
         },
         {
-          "name": "Fouet Lianes",
+          "name": "Foue_Lianes",
           "type": "Plante",
           "power": 45
         }
@@ -25,17 +22,14 @@
     },
     {
       "name": "Herbizarre",
-      "type": [
-        "Plante",
-        "Poison"
-      ],
+      "type": ["Plante", "Poison"],
       "hp": 60,
       "attack": 62,
       "defense": 63,
       "speed": 60,
       "attacks": [
         {
-          "name": "Tranch’Herbe",
+          "name": "Tranch_Herbe",
           "type": "Plante",
           "power": 55
         },
@@ -48,10 +42,7 @@
     },
     {
       "name": "Florizarre",
-      "type": [
-        "Plante",
-        "Poison"
-      ],
+      "type": ["Plante", "Poison"],
       "hp": 80,
       "attack": 82,
       "defense": 83,
@@ -63,7 +54,7 @@
           "power": 90
         },
         {
-          "name": "Lance-Soleil",
+          "name": "Lance_Soleil",
           "type": "Plante",
           "power": 120
         }
@@ -71,9 +62,7 @@
     },
     {
       "name": "Salamèche",
-      "type": [
-        "Feu"
-      ],
+      "type": ["Feu"],
       "hp": 39,
       "attack": 52,
       "defense": 43,
@@ -85,7 +74,7 @@
           "power": 40
         },
         {
-          "name": "Flammèche",
+          "name": "Flammeche",
           "type": "Feu",
           "power": 40
         }
@@ -93,9 +82,7 @@
     },
     {
       "name": "Reptincel",
-      "type": [
-        "Feu"
-      ],
+      "type": ["Feu"],
       "hp": 58,
       "attack": 64,
       "defense": 58,
@@ -107,7 +94,7 @@
           "power": 40
         },
         {
-          "name": "Crocs Feu",
+          "name": "Crocs_Feu",
           "type": "Feu",
           "power": 65
         }
@@ -115,21 +102,19 @@
     },
     {
       "name": "Dracaufeu",
-      "type": [
-        "Feu"
-      ],
+      "type": ["Feu"],
       "hp": 78,
       "attack": 84,
       "defense": 78,
       "speed": 100,
       "attacks": [
         {
-          "name": "Lame_d’Air",
+          "name": "Lame_dair",
           "type": "vol",
           "power": 75
         },
         {
-          "name": "Lance-Flammes",
+          "name": "LanceFlamme",
           "type": "Feu",
           "power": 90
         }
@@ -137,31 +122,7 @@
     },
     {
       "name": "Carapuce",
-      "type": [
-        "Eau"
-      ],
-      "hp": 44,
-      "attack": 48,
-      "defense": 65,
-      "speed": 43,
-      "attacks": [
-        {
-          "name": "Charge",
-          "type": "Normal",
-          "power": 40
-        },
-        {
-          "name": "Pistolet_à_O",
-          "type": "Eau",
-          "power": 40
-        }
-      ]
-    },
-    {
-      "name": "Carapuce",
-      "type": [
-        "Eau"
-      ],
+      "type": ["Eau"],
       "hp": 44,
       "attack": 48,
       "defense": 65,
@@ -181,9 +142,7 @@
     },
     {
       "name": "Carabaffe",
-      "type": [
-        "Eau"
-      ],
+      "type": ["Eau"],
       "hp": 59,
       "attack": 63,
       "defense": 80,
@@ -203,16 +162,14 @@
     },
     {
       "name": "Tortank",
-      "type": [
-        "Eau"
-      ],
+      "type": ["Eau"],
       "hp": 79,
       "attack": 83,
       "defense": 100,
       "speed": 78,
       "attacks": [
         {
-          "name": "Hydro-Queue",
+          "name": "Hydro_Queue",
           "type": "Eau",
           "power": 90
         },
