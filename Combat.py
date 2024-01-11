@@ -32,7 +32,7 @@ Lame_dair = Move("Lame d'Air", "Special", "Vol", 75)
 Boutefeu = Move("Boutefeu", "Physique", "Feu", 120)
 Hydro_queue = Move("Hydro Queue", "Physique", "Eau", 90)
 Vibraqua = Move("Vibraqua", "Special", "Eau", 60)
-Morsure = Move("Morcure", "Physique", "Dark", 60)
+Morsure = Move("Morsure", "Physique", "Dark", 60)
 Tour_rapide = Move("Tour rapide", "Physique", "Normal", 50)
 Canon_graine = Move("Canon graine", "Physique", "Plante", 60)
 Bombe_Beurk = Move("Bombe Beurk", "Special", "Poison", 90)
@@ -44,6 +44,12 @@ Pistolet_a_O = Move("Pistolet_a_O", "Special", "Eau", 40)
 Charge = Move("Charge", "Physique", "Normal", 40)
 Crocs_Feu = Move("Crocs_Feu", "Physique", "Feu", 65)
 Flammeche = Move("Flammeche", "Special", "Feu", 40)
+Tranch_Herbe = Move("Tranch_Herbe", "physique", "plante", 95)
+Tempête_Florale = Move("Tempête_Florale", "Physique", "plante", 90)
+Lance_Soleil = Move("Lance_Soleil", "Special", "plante", 120)
+Griffe = Move("Griffe", "physique", "Normal", 40)
+Hydrocanon = Move("Hydrocanon", "special", "Eau", 120)
+
 
 #Pokemon stats + attaque
 
