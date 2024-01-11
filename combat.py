@@ -24,6 +24,7 @@ class Combat:
         # Charger les sprites
         self.set_sprite1("Dracaufeu", "sprite-dos")  # Charger le sprite de dos pour Dracaufeu
         self.set_sprite2(random.choice([name for name in self.json.keys() if name != "Dracaufeu" and "sprite-face" in self.json[name]]), "sprite-face")  # Charger le sprite de face pour le deuxième Pokémon
+        self.cri()
 
     def set_sprite1(self, pokemon_name, sprite_type):
         # Récupérer le chemin du sprite
@@ -99,7 +100,6 @@ class Combat:
         self.draw()
         self.draw2()
         self.draw_pv()
-        self.cri()
         pygame.display.flip()
 
 # Créer une instance de la classe Combat
