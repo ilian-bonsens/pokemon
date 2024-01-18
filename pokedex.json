@@ -1,5 +1,5 @@
 {
-    "Salamèche": {
+    "Salameche": {
         "element": "Feu",
         "element2": null,
         "pv": 39,
@@ -10,7 +10,11 @@
         "vitesse": 65,
         "sprite-face": "sprites-pokemon/charmander-face.png",
         "sprite-dos": "sprites-pokemon/charmander-back.png",
-        "cris": "cris-pokemon/charmander.mp3"
+        "cri": "cri-pokemon/charmander.ogg",
+        "axe x": 155,
+        "axe y": 265,
+        "axe x2": 505,
+        "axe y2": 100
     },
     "Reptincel": {
         "element": "Feu",
@@ -23,7 +27,11 @@
         "vitesse": 80,
         "sprite-face": "sprites-pokemon/charmeleon-face.png",
         "sprite-dos": "sprites-pokemon/charmeleon-back.png",
-        "cris": "cris-pokemon/charmeleon.mp3"
+        "cri": "cri-pokemon/charmeleon.ogg",
+        "axe x": 100,
+        "axe y": 230,
+        "axe x2": 510,
+        "axe y2": 95
     },
     "Dracaufeu": {
         "element": "Feu",
@@ -36,7 +44,11 @@
         "vitesse": 167,
         "sprite-face": "sprites-pokemon/charizard-face.png",
         "sprite-dos": "sprites-pokemon/charizard-back.png",
-        "cris": "cris-pokemon/charizard.mp3"
+        "cri": "cri-pokemon/charizard.ogg",
+        "axe x": 60,
+        "axe y": 185,
+        "axe x2": 505,
+        "axe y2": 75
 
     },
     "Carapuce": {
@@ -50,7 +62,11 @@
             "vitesse": 43,
             "sprite-face": "sprites-pokemon/squirtle-face.png",
             "sprite-dos": "sprites-pokemon/squirtle-back.png",
-            "cris": "cris-pokemon/squirtle.mp3"
+            "cri": "cri-pokemon/squirtle.ogg",
+            "axe x": 160,
+            "axe y": 265,
+            "axe x2": 505,
+            "axe y2": 110
     },
     "Carabaffe": {
         "element": "Eau",
@@ -63,7 +79,11 @@
         "vitesse": 58,
         "sprite-face": "sprites-pokemon/wartortle-face.png",
         "sprite-dos": "sprites-pokemon/wartortle-back.png",
-        "cris": "cris-pokemon/wartortle.mp3"
+        "cri": "cri-pokemon/wartortle.ogg",
+        "axe x": 145,
+        "axe y": 225,
+        "axe x2": 505,
+        "axe y2": 90
     },
     "Tortank": {
         "element": "Eau",
@@ -76,7 +96,11 @@
         "vitesse": 143,
         "sprite-face": "sprites-pokemon/blastoise-face.png",
         "sprite-dos": "sprites-pokemon/blastoise-back.png",
-        "cris": "cris-pokemon/blastoise.mp3"
+        "cri": "cri-pokemon/blastoise.ogg",
+        "axe x": 135,
+        "axe y": 225,
+        "axe x2": 500,
+        "axe y2": 90
     },
     "Bulbizarre": {
         "element": "Plante",
@@ -89,7 +113,11 @@
         "vitesse": 45,
         "sprite-face": "sprites-pokemon/bulbasaur-face.png",
         "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
-        "cris": "cris-pokemon/bulbasaur.mp3"
+        "cri": "cri-pokemon/bulbasaur.ogg",
+        "axe x": 160,
+        "axe y": 270,
+        "axe x2": 505,
+        "axe y2": 115
     },
     "Herbizarre": {
         "element": "Plante",
@@ -102,7 +130,11 @@
         "vitesse": 60,
         "sprite-face": "sprites-pokemon/ivysaur-face.png",
         "sprite-dos": "sprites-pokemon/ivysaur-back.png",
-        "cris": "cris-pokemon/ivysaur.mp3"
+        "cri": "cri-pokemon/ivysaur.ogg",
+        "axe x": 135,
+        "axe y": 250,
+        "axe x2": 505,
+        "axe y2": 100
     },
     "Florizarre": {
         "element": "Plante",
@@ -115,6 +147,27 @@
         "vitesse": 145,
         "sprite-face": "sprites-pokemon/venusaur-face.png",
         "sprite-dos": "sprites-pokemon/venusaur-back.png",
-        "cris": "cris-pokemon/venusaur.mp3"
+        "cri": "cri-pokemon/venusaur.ogg",
+        "axe x": 105,
+        "axe y": 230,
+        "axe x2": 505,
+        "axe y2": 95
+    },
+    "Pikachu": {
+        "element": "Electrik",
+        "element2": null,
+        "pv": 35,
+        "attaque": 55,
+        "defense": 40,
+        "attaque_spe": 50,
+        "defense_spe": 50,
+        "vitesse": 90,
+        "sprite-face": "sprites-pokemon/pikachu-face.png",
+        "sprite-dos": "sprites-pokemon/pikachu-back.png",
+        "cri": "cri-pokemon/pikachu.ogg",
+        "axe x": 160,
+        "axe y": 270,
+        "axe x2": 560,
+        "axe y2": 150
     }
 }

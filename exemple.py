@@ -1,10 +1,5 @@
-import pygame
+import pygame, time, math, random, requests, io
 from pygame.locals import *
-import time
-import math
-import random
-import requests
-import io
 from urllib.request import urlopen
 
 pygame.init()
