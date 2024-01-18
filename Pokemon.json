@@ -1,6 +1,26 @@
 {
   "pokemon": [
     {
+      "name" : "Pikachu",
+      "type" : "Electrik",
+      "hp" : 35,
+      "attack" : 55,
+      "defense" : 40,
+      "speed" : 90,
+      "attacks" : [
+        {
+          "name" : "vive_attack",
+          "type" : "Normal",
+          "power" : 40
+        },
+        {
+          "name" : "Éclair",
+          "type" : "Electrik",
+          "power" : 40
+        }
+      ]
+    },
+    {
       "name": "Bulbizarre",
       "type": ["Plante", "Poison"],
       "hp": 45,
