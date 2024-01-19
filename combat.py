@@ -25,8 +25,8 @@ class Combat:
             self.json = json.load(f)
 
         # Charger les sprites
-        self.set_sprite1("Tortank", "sprite-dos")
-        self.random_pokemon = random.choice([name for name in self.json.keys() if name != "Tortank" and "sprite-face" in self.json[name]])
+        self.set_sprite1("Pikachu", "sprite-dos")
+        self.random_pokemon = random.choice([name for name in self.json.keys() if name != "Pikachu" and "sprite-face" in self.json[name]])
         self.set_sprite2(self.random_pokemon, "sprite-face")
         self.cri()
 
@@ -60,8 +60,8 @@ class Combat:
 
     def draw(self):
         # Calculer la position pour centrer le sprite
-        x = self.json["Tortank"]["axe x"]
-        y = self.json["Tortank"]["axe y"]
+        x = self.json["Pikachu"]["axe x"]
+        y = self.json["Pikachu"]["axe y"]
 
         # Dessiner le sprite
         sprite = self.image.copy()
@@ -81,11 +81,23 @@ class Combat:
         fenetre.ecran.blit(sprite, (x2, y2))
 
     def draw_pv(self):
-        pygame.draw.rect(fenetre.ecran, green, (450, 70, 170, 8))
-        pygame.draw.rect(fenetre.ecran, green, (50, 180, 170, 8))
+        health_bar = pygame.image.load("images/Health-bar.png").convert_alpha()
+        health_bar_adverse = pygame.image.load("images/Health-bar-adverse.png").convert_alpha()
+        new_height = int(220 * health_bar.get_height() / health_bar.get_width())
+        new_height_adverse = int(220 * health_bar_adverse.get_height() / health_bar_adverse.get_width())
+        health_bar = pygame.transform.scale(health_bar, (220, new_height))
+        health_bar_adverse = pygame.transform.scale(health_bar_adverse, (220, new_height_adverse))
+        position_health_bar = (0, 130)
+        if self.set_sprite1("Pikachu", "sprite-dos"):
+            position_health_bar = (0, 160)
+        position_health_bar_adverse = (580, 50)
+        fenetre.ecran.blit(health_bar, position_health_bar)
+        fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
+        pygame.draw.rect(fenetre.ecran, red, (91, 174, 86, 5), 0)
+        pygame.draw.rect(fenetre.ecran, green, (91, 174, 86, 5), 0)
 
     def cri(self):
-        pygame.mixer.music.load(self.json["Tortank"]["cri"])
+        pygame.mixer.music.load(self.json["Pikachu"]["cri"])
         pygame.mixer.music.play()
 
         # Mettre en file d'attente le cri du deuxième Pokémon
@@ -118,26 +130,6 @@ class Combat:
         pygame.draw.rect(fenetre.ecran, light_grey, (400, 380, 390, 110), 0, 4)
 
         pygame.display.flip()
-    
-    def create_button(width, height, left, top, text_cx, text_cy, label):
-        # position of the mouse cursor
-        mouse_cursor = pygame.mouse.get_pos()
-    
-        button = pygame.rect(left, top, width, height)
-        
-        # highlight the button if mouse is pointing to it
-        if button.collidepoint(mouse_cursor):
-            pygame.draw.rect(fenetre.ecran, yellow, button)
-        else:
-            pygame.draw.rect(fenetre.ecran, white, button)
-            
-        # add the label to the button
-        font = pygame.font.Font(pygame.font.get_default_font(), 16)
-        text = font.render(f'{label}', True, black)
-        text_rect = text.get_rect(center=(text_cx, text_cy))
-        fenetre.ecran.blit(text, text_rect)
-        
-        return button
 
 # Créer une instance de la classe Combat
 combat = Combat(300, 300, 400, 400, 'pokedex.json')

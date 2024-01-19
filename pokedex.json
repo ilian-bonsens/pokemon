@@ -46,10 +46,9 @@
         "sprite-dos": "sprites-pokemon/charizard-back.png",
         "cri": "cri-pokemon/charizard.ogg",
         "axe x": 60,
-        "axe y": 185,
+        "axe y": 190,
         "axe x2": 505,
         "axe y2": 75
-
     },
     "Carapuce": {
             "element": "Eau",
