@@ -81,20 +81,25 @@ class Combat:
         fenetre.ecran.blit(sprite, (x2, y2))
 
     def draw_pv(self):
+        # Dessiner la barre de vie du premier Pokémon
         health_bar = pygame.image.load("images/Health-bar.png").convert_alpha()
-        health_bar_adverse = pygame.image.load("images/Health-bar-adverse.png").convert_alpha()
         new_height = int(220 * health_bar.get_height() / health_bar.get_width())
-        new_height_adverse = int(220 * health_bar_adverse.get_height() / health_bar_adverse.get_width())
         health_bar = pygame.transform.scale(health_bar, (220, new_height))
-        health_bar_adverse = pygame.transform.scale(health_bar_adverse, (220, new_height_adverse))
         position_health_bar = (0, 130)
         if self.set_sprite1("Pikachu", "sprite-dos"):
             position_health_bar = (0, 160)
-        position_health_bar_adverse = (580, 50)
         fenetre.ecran.blit(health_bar, position_health_bar)
-        fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
         pygame.draw.rect(fenetre.ecran, red, (91, 174, 86, 5), 0)
         pygame.draw.rect(fenetre.ecran, green, (91, 174, 86, 5), 0)
+
+        # Dessiner la barre de vie du deuxième Pokémon
+        health_bar_adverse = pygame.image.load("images/Health-bar-adverse.png").convert_alpha()
+        new_height_adverse = int(220 * health_bar_adverse.get_height() / health_bar_adverse.get_width())
+        health_bar_adverse = pygame.transform.scale(health_bar_adverse, (220, new_height_adverse))
+        position_health_bar_adverse = (580, 35)
+        fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
+        pygame.draw.rect(fenetre.ecran, red, (703, 78, 22, 5), 0)
+        pygame.draw.rect(fenetre.ecran, green, (703, 78, 82, 5), 0)
 
     def cri(self):
         pygame.mixer.music.load(self.json["Pikachu"]["cri"])
