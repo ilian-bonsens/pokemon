@@ -1,172 +1,240 @@
 {
-    "Salameche": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 39,
-        "attaque": 56,
-        "defense": 47,
-        "attaque_spe": 60,
-        "defense_spe": 50,
-        "vitesse": 65,
-        "sprite-face": "sprites-pokemon/charmander-face.png",
-        "sprite-dos": "sprites-pokemon/charmander-back.png",
-        "cri": "cri-pokemon/charmander.ogg",
-        "axe x": 155,
-        "axe y": 265,
-        "axe x2": 505,
-        "axe y2": 100
-    },
-    "Reptincel": {
-        "element": "Feu",
-        "element2": null,
-        "pv": 58,
-        "attaque": 64,
-        "defense": 58,
-        "attaque_spe": 80,
-        "defense_spe": 65,
-        "vitesse": 80,
-        "sprite-face": "sprites-pokemon/charmeleon-face.png",
-        "sprite-dos": "sprites-pokemon/charmeleon-back.png",
-        "cri": "cri-pokemon/charmeleon.ogg",
-        "axe x": 100,
-        "axe y": 230,
-        "axe x2": 510,
-        "axe y2": 95
+  "Pikachu": {
+    "type" : "Electrik",
+    "hp" : 35,
+    "attack" : 55,
+    "defense" : 40,
+    "speed" : 90,
+    "sprite-face": "sprites-pokemon/pikachu-face.png",
+    "sprite-dos": "sprites-pokemon/pikachu-back.png",
+    "cri": "cri-pokemon/pikachu.ogg",
+    "axe x": 160,
+    "axe y": 270,
+    "axe x2": 560,
+    "axe y2": 150,
+    "attacks" : [
+      {
+        "name" : "vive_attack",
+        "type" : "Normal",
+        "power" : 40
+      },
+      {
+        "name" : "Éclair",
+        "type" : "Electrik",
+        "power" : 40
+      }
+    ]
+  },
+  "Bulbizarre": {
+    "type": ["Plante", "Poison"],
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "speed": 45,
+    "sprite-face": "sprites-pokemon/bulbasaur-face.png",
+    "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
+    "cri": "cri-pokemon/bulbasaur.ogg",
+    "axe x": 160,
+    "axe y": 270,
+    "axe x2": 505,
+    "axe y2": 115,
+    "attacks": [
+      {
+        "name": "charge",
+        "type": "Normal",
+        "power": 40
+      },
+      {
+        "name": "Foue_Lianes",
+        "type": "Plante",
+        "power": 45
+      }
+    ]
+  },
+  "Florizarre": {
+    "type": ["Plante", "Poison"],
+    "hp": 80,
+    "attack": 82,
+    "defense": 83,
+    "speed": 80,
+    "sprite-face": "sprites-pokemon/venusaur-face.png",
+    "sprite-dos": "sprites-pokemon/venusaur-back.png",
+    "cri": "cri-pokemon/venusaur.ogg",
+    "axe x": 105,
+    "axe y": 230,
+    "axe x2": 505,
+    "axe y2": 95,
+    "attacks": [
+      {
+        "name": "Tempête_Florale",
+        "type": "Plante",
+        "power": 90
+      },
+      {
+        "name": "Lance_Soleil",
+        "type": "Plante",
+        "power": 120
+      }
+    ]
+  },
+  "Salamèche": {
+    "type": ["Feu"],
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "speed": 65,
+    "sprite-face": "sprites-pokemon/charmander-face.png",
+    "sprite-dos": "sprites-pokemon/charmander-back.png",
+    "cri": "cri-pokemon/charmander.ogg",
+    "axe x": 155,
+    "axe y": 265,
+    "axe x2": 505,
+    "axe y2": 100,
+    "attacks": [
+      {
+        "name": "Griffe",
+        "type": "Normal",
+        "power": 40
+      },
+      {
+        "name": "Flammeche",
+        "type": "Feu",
+        "power": 40
+      }
+    ]
+  },
+  "Reptincel": {
+    "type": ["Feu"],
+    "hp": 58,
+    "attack": 64,
+    "defense": 58,
+    "speed": 80,
+    "sprite-face": "sprites-pokemon/charmeleon-face.png",
+    "sprite-dos": "sprites-pokemon/charmeleon-back.png",
+    "cri": "cri-pokemon/charmeleon.ogg",
+    "axe x": 100,
+    "axe y": 230,
+    "axe x2": 510,
+    "axe y2": 95,
+    "attacks": [
+        {
+          "name": "Griffe",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Crocs_Feu",
+          "type": "Feu",
+          "power": 65
+        }
+      ]
     },
     "Dracaufeu": {
-        "element": "Feu",
-        "element2": "Vol",
-        "pv": 185,
-        "attaque": 149,
-        "defense": 143,
-        "attaque_spe": 177,
-        "defense_spe": 150,
-        "vitesse": 167,
-        "sprite-face": "sprites-pokemon/charizard-face.png",
-        "sprite-dos": "sprites-pokemon/charizard-back.png",
-        "cri": "cri-pokemon/charizard.ogg",
-        "axe x": 60,
-        "axe y": 190,
-        "axe x2": 505,
-        "axe y2": 75
+      "type": ["Feu"],
+      "hp": 78,
+      "attack": 84,
+      "defense": 78,
+      "speed": 100,
+      "sprite-face": "sprites-pokemon/charizard-face.png",
+      "sprite-dos": "sprites-pokemon/charizard-back.png",
+      "cri": "cri-pokemon/charizard.ogg",
+      "axe x": 60,
+      "axe y": 190,
+      "axe x2": 505,
+      "axe y2": 75,
+      "attacks": [
+        {
+          "name": "Lame_dair",
+          "type": "vol",
+          "power": 75
+        },
+        {
+          "name": "LanceFlamme",
+          "type": "Feu",
+          "power": 90
+        }
+      ]
     },
     "Carapuce": {
-            "element": "Eau",
-            "element2": null,
-            "pv": 44,
-            "attaque": 48,
-            "defense": 65,
-            "attaque_spe": 50,
-            "defense_spe": 64,
-            "vitesse": 43,
-            "sprite-face": "sprites-pokemon/squirtle-face.png",
-            "sprite-dos": "sprites-pokemon/squirtle-back.png",
-            "cri": "cri-pokemon/squirtle.ogg",
-            "axe x": 160,
-            "axe y": 265,
-            "axe x2": 505,
-            "axe y2": 110
+      "type": ["Eau"],
+      "hp": 44,
+      "attack": 48,
+      "defense": 65,
+      "speed": 43,
+      "sprite-face": "sprites-pokemon/squirtle-face.png",
+      "sprite-dos": "sprites-pokemon/squirtle-back.png",
+      "cri": "cri-pokemon/squirtle.ogg",
+      "axe x": 160,
+      "axe y": 265,
+      "axe x2": 505,
+      "axe y2": 110,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Pistolet_à_O",
+          "type": "Eau",
+          "power": 40
+        }
+      ]
     },
     "Carabaffe": {
-        "element": "Eau",
-        "element2": null,
-        "pv": 59,
-        "attaque": 63,
-        "defense": 80,
-        "attaque_spe": 65,
-        "defense_spe": 80,
-        "vitesse": 58,
-        "sprite-face": "sprites-pokemon/wartortle-face.png",
-        "sprite-dos": "sprites-pokemon/wartortle-back.png",
-        "cri": "cri-pokemon/wartortle.ogg",
-        "axe x": 145,
-        "axe y": 225,
-        "axe x2": 505,
-        "axe y2": 90
+      "type": ["Eau"],
+      "hp": 59,
+      "attack": 63,
+      "defense": 80,
+      "speed": 58,
+      "sprite-face": "sprites-pokemon/wartortle-face.png",
+      "sprite-dos": "sprites-pokemon/wartortle-back.png",
+      "cri": "cri-pokemon/wartortle.ogg",
+      "axe x": 145,
+      "axe y": 225,
+      "axe x2": 505,
+      "axe y2": 90,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Vibraqua",
+          "type": "Eau",
+          "power": 60
+        }
+      ]
     },
     "Tortank": {
-        "element": "Eau",
-        "element2": null,
-        "pv": 186,
-        "attaque": 148,
-        "defense": 167,
-        "attaque_spe": 150,
-        "defense_spe": 172,
-        "vitesse": 143,
-        "sprite-face": "sprites-pokemon/blastoise-face.png",
-        "sprite-dos": "sprites-pokemon/blastoise-back.png",
-        "cri": "cri-pokemon/blastoise.ogg",
-        "axe x": 135,
-        "axe y": 225,
-        "axe x2": 500,
-        "axe y2": 90
-    },
-    "Bulbizarre": {
-        "element": "Plante",
-        "element2": "Poison",
-        "pv": 45,
-        "attaque": 49,
-        "defense": 49,
-        "attaque_spe": 65,
-        "defense_spe": 65,
-        "vitesse": 45,
-        "sprite-face": "sprites-pokemon/bulbasaur-face.png",
-        "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
-        "cri": "cri-pokemon/bulbasaur.ogg",
-        "axe x": 160,
-        "axe y": 270,
-        "axe x2": 505,
-        "axe y2": 115
-    },
-    "Herbizarre": {
-        "element": "Plante",
-        "element2": "Poison",
-        "pv": 60,
-        "attaque": 62,
-        "defense": 63,
-        "attaque_spe": 80,
-        "defense_spe": 80,
-        "vitesse": 60,
-        "sprite-face": "sprites-pokemon/ivysaur-face.png",
-        "sprite-dos": "sprites-pokemon/ivysaur-back.png",
-        "cri": "cri-pokemon/ivysaur.ogg",
-        "axe x": 135,
-        "axe y": 250,
-        "axe x2": 505,
-        "axe y2": 100
-    },
-    "Florizarre": {
-        "element": "Plante",
-        "element2": "Poison",
-        "pv": 187,
-        "attaque": 147,
-        "defense": 148,
-        "attaque_spe": 167,
-        "defense_spe": 167,
-        "vitesse": 145,
-        "sprite-face": "sprites-pokemon/venusaur-face.png",
-        "sprite-dos": "sprites-pokemon/venusaur-back.png",
-        "cri": "cri-pokemon/venusaur.ogg",
-        "axe x": 105,
-        "axe y": 230,
-        "axe x2": 505,
-        "axe y2": 95
-    },
-    "Pikachu": {
-        "element": "Electrik",
-        "element2": null,
-        "pv": 35,
-        "attaque": 55,
-        "defense": 40,
-        "attaque_spe": 50,
-        "defense_spe": 50,
-        "vitesse": 90,
-        "sprite-face": "sprites-pokemon/pikachu-face.png",
-        "sprite-dos": "sprites-pokemon/pikachu-back.png",
-        "cri": "cri-pokemon/pikachu.ogg",
-        "axe x": 160,
-        "axe y": 270,
-        "axe x2": 560,
-        "axe y2": 150
+      "type": ["Eau"],
+      "hp": 79,
+      "attack": 83,
+      "defense": 100,
+      "speed": 78,
+      "sprite-face": "sprites-pokemon/blastoise-face.png",
+      "sprite-dos": "sprites-pokemon/blastoise-back.png",
+      "cri": "cri-pokemon/blastoise.ogg",
+      "axe x": 135,
+      "axe y": 225,
+      "axe x2": 500,
+      "axe y2": 90,
+      "attacks": [
+        {
+          "name": "Hydro_Queue",
+          "type": "Eau",
+          "power": 90
+        },
+        {
+          "name": "Hydrocanon",
+          "type": "Eau",
+          "power": 110
+        }
+      ]
     }
-}
+  }
+
+
+
+
