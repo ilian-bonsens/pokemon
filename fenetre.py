@@ -5,7 +5,7 @@ class Fenetre:
         self.ecran = pygame.display.set_mode((800, 500))
         self.framerate = 60
         pygame.display.set_caption("Pokémon IML V1")
-        pygame.display.set_icon(pygame.image.load("images/icone.png"))
+        pygame.display.set_icon(pygame.image.load("images-i/icone.png"))
 
     def run(self):
         running = True

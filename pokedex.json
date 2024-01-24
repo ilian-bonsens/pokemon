@@ -51,6 +51,32 @@
       }
     ]
   },
+  "Herbizarre": {
+   "type": ["Plante", "Poison"],
+   "hp": 60,
+   "attack": 62,
+   "defense": 63,
+   "speed": 60,
+   "sprite-face": "sprites-pokemon/ivysaur-face.png",
+   "sprite-dos": "sprites-pokemon/ivysaur-back.png",
+   "cri": "cri-pokemon/ivysaur.ogg",
+   "axe x": 160,
+   "axe y": 270,
+   "axe x2": 505,
+   "axe y2": 115,
+   "attacks": [
+     {
+       "name": "Tranch_Herbe",
+       "type": "Plante",
+       "power": 55
+     },
+     {
+       "name": "Charge",
+       "type": "Normal",
+       "power": 40
+     }
+    ] 
+  },
   "Florizarre": {
     "type": ["Plante", "Poison"],
     "hp": 80,

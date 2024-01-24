@@ -1,7 +1,8 @@
-import json, pygame, random
+import pygame, json, random
 from fenetre import Fenetre
 
 pygame.init()
+pygame.mixer.init()
 
 fenetre = Fenetre()
 
@@ -11,16 +12,19 @@ class Sprites:
         self.y = y
         self.x2 = x2
         self.y2 = y2
+        self.current_pokemon = None  # Initialisez l'attribut ici
 
         with open(json_file, 'r', encoding='utf-8') as f:
             self.json = json.load(f)
 
+        # Charger les sprites
         self.set_sprite1("Pikachu", "sprite-dos")
         self.random_pokemon = random.choice([name for name in self.json.keys() if name != "Pikachu" and "sprite-face" in self.json[name]])
         self.set_sprite2(self.random_pokemon, "sprite-face")
         self.cri()
 
     def set_sprite1(self, pokemon_name, sprite_type):
+        self.current_pokemon = pokemon_name  # Mise à jour de l'attribut
         # Récupérer le chemin du sprite
         sprite_path = self.json[pokemon_name][sprite_type]
 
