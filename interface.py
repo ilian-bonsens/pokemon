@@ -2,6 +2,7 @@ import pygame
 from pygame import Rect
 from fenetre import Fenetre
 from sprites import Sprites
+import json
 
 pygame.init()
 
@@ -15,6 +16,14 @@ dark_grey = (50, 50, 50)
 light_grey = (150, 150, 150)
 yellow = (222, 193, 96)
 
+# Charger le fichier JSON
+with open('pokedex.json', encoding='utf-8') as f:
+        data = json.load(f)
+
+# Récupérer les attaques du Pokémon
+pokemon = data["Pikachu"]
+attacks = pokemon["attacks"]
+
 class Interface:
     def __init__(self, x, y, x2, y2, json_file):
         self.sprites = Sprites(x, y, x2, y2, json_file)
@@ -22,6 +31,7 @@ class Interface:
         self.attaquer = True
         self.potions = True
         self.utiliser_potion = False
+        self.utiliser_attaques = False
 
     def draw_pv(self):
         # Dessiner la barre de vie du premier Pokémon
@@ -29,9 +39,12 @@ class Interface:
         new_height = int(220 * health_bar.get_height() / health_bar.get_width())
         health_bar = pygame.transform.scale(health_bar, (220, new_height))
         position_health_bar = (0, 130)
+
         if self.sprites.current_pokemon == "Dracaufeu":  # Utilisation de l'attribut current_pokemon
             position_health_bar = (0, 160)
+
         fenetre.ecran.blit(health_bar, position_health_bar)
+
         pygame.draw.rect(fenetre.ecran, red, (91, 174, 86, 5), 0)
         pygame.draw.rect(fenetre.ecran, green, (91, 174, 86, 5), 0)
 
@@ -40,9 +53,12 @@ class Interface:
         new_height_adverse = int(220 * health_bar_adverse.get_height() / health_bar_adverse.get_width())
         health_bar_adverse = pygame.transform.scale(health_bar_adverse, (220, new_height_adverse))
         position_health_bar_adverse = (580, 35)
+
         if self.sprites.random_pokemon == "Dracaufeu":
             position_health_bar_adverse = (580, 15) 
+
         fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
+
         pygame.draw.rect(fenetre.ecran, red, (703, 78, 22, 5), 0)
         pygame.draw.rect(fenetre.ecran, green, (703, 78, 82, 5), 0)
 
@@ -71,10 +87,16 @@ class Interface:
 
         if self.attaquer == True:
             self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
+
         if self.potions == True:
             self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Potions")
-        if self.utiliser_potion == True:  # Vérifiez l'état du bouton "Utiliser une potion"
+
+        if self.utiliser_potion == True:
             self.create_bouton(360, 90, 410, 390, 410 + 360/2, 390 + 90/2, f"Utiliser une potion ({self.nb_potions})")
+
+        if self.utiliser_attaques == True:
+            for i in range(len(attacks)):
+                self.create_bouton(180, 45, 410 + (i % 2) * 190, 390 + (i // 2) * 50, 410 + (i % 2) * 190 + 180/2, 415 + (i // 2) * 50, attacks[i]["name"])
 
         pygame.display.flip()
 
@@ -98,15 +120,26 @@ class Interface:
         
         return bouton
     
-    def use_potions(self, event, bouton_attaquer, bouton_potions):
+    def use_potions(self, event, bouton_potions):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if bouton_potions.collidepoint(event.pos):
                 if self.nb_potions > 0 :
                     self.nb_potions -= 1
+
                 self.attaquer = False
                 self.potions = False
-                if self.potions == False:
-                    self.utiliser_potion = True  # Mettez à jour l'état du bouton "Utiliser une potion"
+                self.utiliser_potion = True  # Mettez à jour l'état du bouton "Utiliser une potion"
+
+                pygame.display.flip()
+
+    def use_attaques(self, event, bouton_attaquer):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if bouton_attaquer.collidepoint(event.pos):
+                self.attaquer = False
+                self.potions = False
+                self.utiliser_potion = False
+                self.utiliser_attaques = True
+
                 pygame.display.flip()
 
 
@@ -122,7 +155,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         else:
-            combat.use_potions(event, bouton_attaquer, bouton_potions)
+            combat.use_potions(event, bouton_potions)
+            combat.use_attaques(event, bouton_attaquer)
     combat.interface()
 
 pygame.quit()
+

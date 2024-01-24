@@ -14,7 +14,7 @@
     "axe y2": 150,
     "attacks" : [
       {
-        "name" : "vive_attack",
+        "name" : "Vive_attaque",
         "type" : "Normal",
         "power" : 40
       },
