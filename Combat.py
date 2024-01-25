@@ -54,7 +54,7 @@ Tour_rapide = Move("Tour rapide", "Physique", "Normal", 50)
 Canon_graine = Move("Canon graine", "Physique", "Plante", 60)
 Bombe_Beurk = Move("Bombe Beurk", "Special", "Poison", 90)
 Coupe_feuille = Move("Coupe feuille", "Physique", "Plante", 55)
-Damoclès = Move("Damoclès", "Physique", "Normal", 120)
+Damocles = Move("Damoclès", "Physique", "Normal", 120)
 Fouet_Lianes = Move("Fouet Lianes", "physique", "plante", 45)
 Faux_Coup = Move("Faux_Coup", "physique", "Normal", 40)
 Pistolet_a_O = Move("Pistolet_a_O", "Special", "Eau", 40)
@@ -62,7 +62,7 @@ Charge = Move("Charge", "Physique", "Normal", 40)
 Crocs_Feu = Move("Crocs_Feu", "Physique", "Feu", 65)
 Flammeche = Move("Flammeche", "Special", "Feu", 40)
 Tranch_Herbe = Move("Tranch_Herbe", "physique", "plante", 95)
-Tempête_Florale = Move("Tempête_Florale", "Physique", "plante", 90)
+Tempete_Florale = Move("Tempête_Florale", "Physique", "plante", 90)
 Lance_Soleil = Move("Lance_Soleil", "Special", "plante", 120)
 Griffe = Move("Griffe", "physique", "Normal", 40)
 Hydrocanon = Move("Hydrocanon", "special", "Eau", 120)
@@ -82,19 +82,19 @@ Pok5 = Pokemon("Carabaffe", "Eau", None, 59, 63, 80, 65, 80, 58, Pistolet_a_O, M
 Pok6 = Pokemon("Tortank", "Eau", None, 186, 148, 167, 150, 172, 143, Vibraqua, Tour_rapide, Morsure, None)
 Pok7 = Pokemon("Bulbizarre", "Plante", "Poison", 45, 49, 49, 65, 65, 45, None, Fouet_Lianes, None, Charge)
 Pok8 = Pokemon("Herbizarre", "Plante", "Poison", 60, 62, 63, 80, 80, 60, Faux_Coup, Fouet_Lianes, None, Charge)
-Pok9 = Pokemon("Florizarre", "Plante", "Poison", 187, 147, 148, 167, 167, 145, Bombe_Beurk, None, Damoclès,
+Pok9 = Pokemon("Florizarre", "Plante", "Poison", 187, 147, 148, 167, 167, 145, Bombe_Beurk, None, Damocles,
                Coupe_feuille)
 Pok10 = Pokemon("Pikachu", "Electrik", None, 35, 55, 40, 50, 50, 90, Éclair, Vive_Attaque, Frotte_Frimousse, Charge)
 
 # Attaques potentielles pour chaque Pokemon
 attaques_potentielles_Pok1 = [Crocs_Feu]
-attaques_potentielles_Pok2 = [Damoclès]
+attaques_potentielles_Pok2 = [Damocles]
 attaques_potentielles_Pok3 = [Lame_dair]
 attaques_potentielles_Pok4 = [Morsure]
-attaques_potentielles_Pok5 = [Damoclès]
+attaques_potentielles_Pok5 = [Damocles]
 attaques_potentielles_Pok6 = [Hydro_queue]
 attaques_potentielles_Pok7 = [Faux_Coup]
-attaques_potentielles_Pok8 = [Damoclès]
+attaques_potentielles_Pok8 = [Damocles]
 attaques_potentielles_Pok9 = [Canon_graine]
 
 

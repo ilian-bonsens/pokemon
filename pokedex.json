@@ -22,6 +22,16 @@
         "name" : "Eclair",
         "type" : "Electrik",
         "power" : 40
+      },
+      {
+        "name" : "Charge",
+        "type" : "Normal",
+        "power" : 40
+      },
+      {
+        "name" : "Frotte_Frimousse",
+            "type" : "Electrik",
+        "power" : 20
       }
     ]
   },
@@ -33,7 +43,7 @@
     "speed": 45,
     "sprite-face": "sprites-pokemon/bulbasaur-face.png",
     "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
-    "cri": "cri-pokemon/bulbasaur.ogg",
+    "cri": "cri-pokemon/Bulbizarre.ogg",
     "axe x": 160,
     "axe y": 270,
     "axe x2": 505,
@@ -59,7 +69,7 @@
     "speed": 60,
     "sprite-face": "sprites-pokemon/ivysaur-face.png",
     "sprite-dos": "sprites-pokemon/ivysaur-back.png",
-    "cri": "cri-pokemon/ivysaur.ogg",
+    "cri": "cri-pokemon/Herbizarre.ogg",
     "axe x": 160,
     "axe y": 270,
     "axe x2": 505,
@@ -74,6 +84,11 @@
         "name": "Charge",
         "type": "Normal",
         "power": 40
+      },
+      {
+        "name": "Faux_Coup",
+        "type": "Normal",
+        "power": 40
       }
     ]
   },
@@ -85,7 +100,7 @@
     "speed": 80,
     "sprite-face": "sprites-pokemon/venusaur-face.png",
     "sprite-dos": "sprites-pokemon/venusaur-back.png",
-    "cri": "cri-pokemon/venusaur.ogg",
+    "cri": "cri-pokemon/Florizarre.ogg",
     "axe x": 105,
     "axe y": 230,
     "axe x2": 505,
@@ -100,10 +115,20 @@
         "name": "Lance_Soleil",
         "type": "Plante",
         "power": 120
+      },
+      {
+        "name": "Bombe_Beurk",
+        "type": "Poison",
+        "power": 90
+      },
+      {
+        "name": "Damocles",
+        "type": "Normal",
+        "power": 120
       }
     ]
   },
-  "Salamèche": {
+  "Salameche": {
     "type": "image-l/Type_Feu.png",
     "hp": 39,
     "attack": 52,
@@ -111,7 +136,7 @@
     "speed": 65,
     "sprite-face": "sprites-pokemon/charmander-face.png",
     "sprite-dos": "sprites-pokemon/charmander-back.png",
-    "cri": "cri-pokemon/charmander.ogg",
+    "cri": "cri-pokemon/Salameche.ogg",
     "axe x": 155,
     "axe y": 265,
     "axe x2": 505,
@@ -137,7 +162,7 @@
     "speed": 80,
     "sprite-face": "sprites-pokemon/charmeleon-face.png",
     "sprite-dos": "sprites-pokemon/charmeleon-back.png",
-    "cri": "cri-pokemon/charmeleon.ogg",
+    "cri": "cri-pokemon/Reptincel.ogg",
     "axe x": 100,
     "axe y": 230,
     "axe x2": 510,
@@ -152,18 +177,23 @@
           "name": "Crocs_Feu",
           "type": "Feu",
           "power": 65
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
         }
       ]
     },
     "Dracaufeu": {
-      "type": "image-l/Type_Feu.png",
+      "type": "image-l/Type_dfv.png",
       "hp": 78,
       "attack": 84,
       "defense": 78,
       "speed": 100,
       "sprite-face": "sprites-pokemon/charizard-face.png",
       "sprite-dos": "sprites-pokemon/charizard-back.png",
-      "cri": "cri-pokemon/charizard.ogg",
+      "cri": "cri-pokemon/Dracaufeu.ogg",
       "axe x": 60,
       "axe y": 190,
       "axe x2": 505,
@@ -178,6 +208,16 @@
           "name": "Lance_Flamme",
           "type": "Feu",
           "power": 90
+        },
+        {
+          "name": "Boutefeu",
+          "type": "Feu",
+          "power": 120
+        },
+        {
+          "name": "Tranche",
+          "type": "Normal",
+          "power": 70
         }
       ]
     },
@@ -189,7 +229,7 @@
       "speed": 43,
       "sprite-face": "sprites-pokemon/squirtle-face.png",
       "sprite-dos": "sprites-pokemon/squirtle-back.png",
-      "cri": "cri-pokemon/squirtle.ogg",
+      "cri": "cri-pokemon/Carapuce.ogg",
       "axe x": 160,
       "axe y": 265,
       "axe x2": 505,
@@ -215,7 +255,7 @@
       "speed": 58,
       "sprite-face": "sprites-pokemon/wartortle-face.png",
       "sprite-dos": "sprites-pokemon/wartortle-back.png",
-      "cri": "cri-pokemon/wartortle.ogg",
+      "cri": "cri-pokemon/Carabaffe.ogg",
       "axe x": 145,
       "axe y": 225,
       "axe x2": 505,
@@ -230,6 +270,11 @@
           "name": "Vibraqua",
           "type": "Eau",
           "power": 60
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
         }
       ]
     },
@@ -241,7 +286,7 @@
       "speed": 78,
       "sprite-face": "sprites-pokemon/blastoise-face.png",
       "sprite-dos": "sprites-pokemon/blastoise-back.png",
-      "cri": "cri-pokemon/blastoise.ogg",
+      "cri": "cri-pokemon/Tortank.ogg",
       "axe x": 135,
       "axe y": 225,
       "axe x2": 500,
@@ -256,6 +301,16 @@
           "name": "Hydrocanon",
           "type": "Eau",
           "power": 110
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
+        },
+        {
+          "name": "Vibraqua",
+          "type": "Eau",
+          "power": 60
         }
       ]
     }
