@@ -27,9 +27,9 @@ attacks = pokemon["attacks"]
 class Interface:
     def __init__(self, x, y, x2, y2, json_file):
         self.sprites = Sprites(x, y, x2, y2, json_file)
-        self.nb_potions = 4
+        self.nb_potions = 3
         self.attaquer = True
-        self.potions = True
+        self.sac = True
         self.utiliser_potion = False
         self.utiliser_attaques = False
 
@@ -88,11 +88,11 @@ class Interface:
         if self.attaquer == True:
             self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
 
-        if self.potions == True:
-            self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Potions")
+        if self.sac == True:
+            self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Sac")
 
         if self.utiliser_potion == True:
-            self.create_bouton(360, 90, 410, 390, 410 + 360/2, 390 + 90/2, f"Utiliser une potion ({self.nb_potions})")
+            self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({self.nb_potions})")
 
         if self.utiliser_attaques == True:
             for i in range(len(attacks)):
@@ -120,23 +120,23 @@ class Interface:
         
         return bouton
     
-    def use_potions(self, event, bouton_potions):
+    def use_potions(self, event, bouton_sac):
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if bouton_potions.collidepoint(event.pos):
-                if self.nb_potions > 0 :
-                    self.nb_potions -= 1
-
+            if bouton_sac.collidepoint(event.pos):
                 self.attaquer = False
-                self.potions = False
+                self.sac = False
                 self.utiliser_potion = True  # Mettez à jour l'état du bouton "Utiliser une potion"
+            elif bouton_utiliser_potion.collidepoint(event.pos):
+                if self.nb_potions > 0:
+                    self.nb_potions -= 1
 
                 pygame.display.flip()
 
     def use_attaques(self, event, bouton_attaquer):
-        if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.type == pygame.MOUSEBUTTONDOWN and self.attaquer:
             if bouton_attaquer.collidepoint(event.pos):
                 self.attaquer = False
-                self.potions = False
+                self.sac = False
                 self.utiliser_potion = False
                 self.utiliser_attaques = True
 
@@ -146,8 +146,8 @@ class Interface:
 combat = Interface(300, 300, 400, 400, 'pokedex.json')
 
 bouton_attaquer = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
-bouton_potions = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Potions")
-bouton_utiliser_potion = combat.create_bouton(360, 90, 410, 390, 410 + 360/2, 390 + 90/2, f"Utiliser une potion ({combat.nb_potions})")
+bouton_sac = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Sac")
+bouton_utiliser_potion = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({combat.nb_potions})")
 
 running = True
 while running:
@@ -155,7 +155,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         else:
-            combat.use_potions(event, bouton_potions)
+            combat.use_potions(event, bouton_sac)
             combat.use_attaques(event, bouton_attaquer)
     combat.interface()
 
