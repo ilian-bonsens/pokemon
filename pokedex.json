@@ -1,6 +1,6 @@
 {
   "Pikachu": {
-    "type" : "Electrik",
+    "type" : "image-l/Type_Electrik.png",
     "hp" : 35,
     "attack" : 55,
     "defense" : 40,
@@ -14,19 +14,19 @@
     "axe y2": 150,
     "attacks" : [
       {
-        "name" : "vive_attack",
+        "name" : "Vive_attack",
         "type" : "Normal",
         "power" : 40
       },
       {
-        "name" : "Éclair",
+        "name" : "Eclair",
         "type" : "Electrik",
         "power" : 40
       }
     ]
   },
   "Bulbizarre": {
-    "type": ["Plante", "Poison"],
+    "type": "image-l/Type_Dpp.png",
     "hp": 45,
     "attack": 49,
     "defense": 49,
@@ -40,7 +40,7 @@
     "axe y2": 115,
     "attacks": [
       {
-        "name": "charge",
+        "name": "Charge",
         "type": "Normal",
         "power": 40
       },
@@ -52,7 +52,7 @@
     ]
   },
    "Herbizarre": {
-    "type": ["Plante", "Poison"],
+    "type": "image-l/Type_Dpp.png",
     "hp": 60,
     "attack": 62,
     "defense": 63,
@@ -78,7 +78,7 @@
     ]
   },
   "Florizarre": {
-    "type": ["Plante", "Poison"],
+    "type": "image-l/Type_Dpp.png",
     "hp": 80,
     "attack": 82,
     "defense": 83,
@@ -92,7 +92,7 @@
     "axe y2": 95,
     "attacks": [
       {
-        "name": "Tempête_Florale",
+        "name": "Tempete_Florale",
         "type": "Plante",
         "power": 90
       },
@@ -104,7 +104,7 @@
     ]
   },
   "Salamèche": {
-    "type": ["Feu"],
+    "type": "image-l/Type_Feu.png",
     "hp": 39,
     "attack": 52,
     "defense": 43,
@@ -130,7 +130,7 @@
     ]
   },
   "Reptincel": {
-    "type": ["Feu"],
+    "type": "image-l/Type_Feu.png",
     "hp": 58,
     "attack": 64,
     "defense": 58,
@@ -156,7 +156,7 @@
       ]
     },
     "Dracaufeu": {
-      "type": ["Feu"],
+      "type": "image-l/Type_Feu.png",
       "hp": 78,
       "attack": 84,
       "defense": 78,
@@ -182,7 +182,7 @@
       ]
     },
     "Carapuce": {
-      "type": ["Eau"],
+      "type": "image-l/Type_Eau.png",
       "hp": 44,
       "attack": 48,
       "defense": 65,
@@ -208,7 +208,7 @@
       ]
     },
     "Carabaffe": {
-      "type": ["Eau"],
+      "type": "image-l/Type_Eau.png",
       "hp": 59,
       "attack": 63,
       "defense": 80,
@@ -234,7 +234,7 @@
       ]
     },
     "Tortank": {
-      "type": ["Eau"],
+      "type": "image-l/Type_Eau.png",
       "hp": 79,
       "attack": 83,
       "defense": 100,
