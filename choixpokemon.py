@@ -48,6 +48,8 @@ class ChoixPokemon:
                     x, y = pygame.mouse.get_pos()
                     for i, rect in enumerate(pokemon_rects):
                         if rect.collidepoint(x, y):
+                            pokemon_nom = noms_pokemon[i].replace('.png', '')  # Enlever l'extension .png
+                            print(f"Vous avez choisi {pokemon_nom} pour commencer la partie")
                             self.pokemon_selectionne = noms_pokemon[i]  # Store the selected Pokemon's name
                             return "quitter"
 
