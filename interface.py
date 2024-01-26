@@ -101,8 +101,7 @@ class Interface:
 
         pygame.display.flip()
 
-    def create_bouton(self, width, height, left, top, text_cx, text_cy, label):  # Ajout de 'self'
-        # position de la souris
+    def create_bouton(self, width, height, left, top, text_cx, text_cy, label):
         pos_souris = pygame.mouse.get_pos()
         
         bouton = Rect(left, top, width, height)
@@ -121,19 +120,16 @@ class Interface:
         
         return bouton
     
-    def use_potions(self, event, bouton_sac):
+    def use_sac(self, event, bouton_sac):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if bouton_sac.collidepoint(event.pos):
                 self.attaquer = False
                 self.sac = False
                 self.utiliser_potion = True
-            elif bouton_utiliser_potion.collidepoint(event.pos):
-                if self.nb_potions > 0:
-                    self.nb_potions -= 1
             
             pygame.display.flip()
 
-    def retour (self, event, bouton_retour):
+    def retour(self, event, bouton_retour):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if bouton_retour.collidepoint(event.pos):
                 self.attaquer = True
@@ -152,6 +148,7 @@ class Interface:
                 self.attaquer = False
                 self.sac = False
                 self.utiliser_attaques = True
+                print("attaquer")
 
             pygame.display.flip()
 
@@ -171,10 +168,9 @@ while running:
             if combat.utiliser_potion or combat.utiliser_attaques:
                 combat.retour(event, bouton_sac)
             else:
-                combat.use_potions(event, bouton_sac)
+                combat.use_sac(event, bouton_sac)
                 combat.use_attaques(event, bouton_attaquer)
     combat.interface()
-
 
 pygame.quit()
 
