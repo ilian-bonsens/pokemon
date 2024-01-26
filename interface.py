@@ -93,6 +93,7 @@ class Interface:
 
         if self.utiliser_potion == True:
             self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({self.nb_potions})")
+            self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Retour")
 
         if self.utiliser_attaques == True:
             for i in range(len(attacks)):
@@ -125,29 +126,41 @@ class Interface:
             if bouton_sac.collidepoint(event.pos):
                 self.attaquer = False
                 self.sac = False
-                self.utiliser_potion = True  # Mettez à jour l'état du bouton "Utiliser une potion"
+                self.utiliser_potion = True
+            elif bouton_utiliser_potion.collidepoint(event.pos):
+                if self.nb_potions > 0:
+                    self.nb_potions -= 1
+            
+            pygame.display.flip()
+
+    def retour (self, event, bouton_retour):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if bouton_retour.collidepoint(event.pos):
+                self.attaquer = True
+                self.sac = True
+                self.utiliser_potion = False
+                self.utiliser_attaques = False
             elif bouton_utiliser_potion.collidepoint(event.pos):
                 if self.nb_potions > 0:
                     self.nb_potions -= 1
 
-                pygame.display.flip()
+            pygame.display.flip()
 
     def use_attaques(self, event, bouton_attaquer):
-        if event.type == pygame.MOUSEBUTTONDOWN and self.attaquer:
+        if event.type == pygame.MOUSEBUTTONDOWN:
             if bouton_attaquer.collidepoint(event.pos):
                 self.attaquer = False
                 self.sac = False
-                self.utiliser_potion = False
                 self.utiliser_attaques = True
 
-                pygame.display.flip()
-
+            pygame.display.flip()
 
 combat = Interface(300, 300, 400, 400, 'pokedex.json')
 
 bouton_attaquer = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
 bouton_sac = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Sac")
 bouton_utiliser_potion = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({combat.nb_potions})")
+bouton_retour = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Retour")
 
 running = True
 while running:
@@ -155,9 +168,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         else:
-            combat.use_potions(event, bouton_sac)
-            combat.use_attaques(event, bouton_attaquer)
+            if combat.utiliser_potion or combat.utiliser_attaques:
+                combat.retour(event, bouton_sac)
+            else:
+                combat.use_potions(event, bouton_sac)
+                combat.use_attaques(event, bouton_attaquer)
     combat.interface()
+
 
 pygame.quit()
 
