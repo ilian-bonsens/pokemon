@@ -6,8 +6,6 @@ import json
 
 pygame.init()
 
-fenetre = Fenetre()
-
 black = (0, 0, 0)
 white = (255, 255, 255)
 green = (0, 200, 0)
@@ -25,13 +23,57 @@ pokemon = data["Pikachu"]
 attacks = pokemon["attacks"]
 
 class Interface:
-    def __init__(self, x, y, x2, y2, json_file):
+    def __init__(self, fenetre, x, y, x2, y2, json_file):
+        self.fenetre = fenetre
         self.sprites = Sprites(x, y, x2, y2, json_file)
         self.nb_potions = 3
         self.attaquer = True
         self.sac = True
         self.utiliser_potion = False
         self.utiliser_attaques = False
+        
+    def run(self):
+        bouton_attaquer = self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
+        bouton_sac = self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Sac")
+        bouton_utiliser_potion = self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({self.nb_potions})")
+        bouton_retour = self.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Retour")
+        
+        running = True
+        while running:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+                    return "quitter"
+
+                # Gestion des événements pour le sac et les attaques
+                if self.utiliser_potion or self.utiliser_attaques:
+                    self.retour(event, bouton_retour, bouton_utiliser_potion)
+                else:
+                    self.use_sac(event, bouton_sac)
+                    self.use_attaques(event, bouton_attaquer)
+
+            # Mettre à jour l'affichage ici
+            self.interface()
+
+        # Autres opérations de nettoyage si nécessaire
+        return "menu"
+    
+    def retour(self, event, bouton_retour, bouton_utiliser_potion):
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if bouton_retour.collidepoint(event.pos):
+                # Si l'utilisateur clique sur "Retour", revenir à l'état précédent
+                self.attaquer = True
+                self.sac = True
+                self.utiliser_potion = False
+                self.utiliser_attaques = False
+            elif bouton_utiliser_potion and bouton_utiliser_potion.collidepoint(event.pos):
+                # Si l'utilisateur clique sur "Utiliser Potion"
+                if self.nb_potions > 0:
+                    # Logique pour utiliser une potion
+                    self.nb_potions -= 1
+                    # Vous pouvez ajouter ici une logique pour l'effet de la potion
+
+            pygame.display.flip()
 
     def draw_pv(self):
         # Dessiner la barre de vie du premier Pokémon
@@ -43,10 +85,10 @@ class Interface:
         if self.sprites.current_pokemon == "Dracaufeu":  # Utilisation de l'attribut current_pokemon
             position_health_bar = (0, 160)
 
-        fenetre.ecran.blit(health_bar, position_health_bar)
+        self.fenetre.ecran.blit(health_bar, position_health_bar)
 
-        pygame.draw.rect(fenetre.ecran, red, (91, 174, 86, 5), 0)
-        pygame.draw.rect(fenetre.ecran, green, (91, 174, 86, 5), 0)
+        pygame.draw.rect(self.fenetre.ecran, red, (91, 174, 86, 5), 0)
+        pygame.draw.rect(self.fenetre.ecran, green, (91, 174, 86, 5), 0)
 
         # Dessiner la barre de vie du deuxième Pokémon
         health_bar_adverse = pygame.image.load("images-i/Health-bar-adverse.png").convert_alpha()
@@ -57,10 +99,10 @@ class Interface:
         if self.sprites.random_pokemon == "Dracaufeu":
             position_health_bar_adverse = (580, 15) 
 
-        fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
+        self.fenetre.ecran.blit(health_bar_adverse, position_health_bar_adverse)
 
-        pygame.draw.rect(fenetre.ecran, red, (703, 78, 22, 5), 0)
-        pygame.draw.rect(fenetre.ecran, green, (703, 78, 82, 5), 0)
+        pygame.draw.rect(self.fenetre.ecran, red, (703, 78, 22, 5), 0)
+        pygame.draw.rect(self.fenetre.ecran, green, (703, 78, 82, 5), 0)
 
     def interface(self):
         # Charger l'image d'arrière-plan
@@ -70,20 +112,20 @@ class Interface:
         background = pygame.transform.scale(background, (800, int(660 * background.get_height() / background.get_width())))
 
         # Dessiner l'image d'arrière-plan par-dessus le rectangle
-        fenetre.ecran.blit(background, (0, 0))
+        self.fenetre.ecran.blit(background, (0, 0))
 
         self.sprites.draw()
         self.sprites.draw2()
         self.draw_pv()
 
         # Dessine le rectangle gris en fond
-        pygame.draw.rect(fenetre.ecran, dark_grey, (0, 370, 800, 130))
+        pygame.draw.rect(self.fenetre.ecran, dark_grey, (0, 370, 800, 130))
         # Dessine à droite le rectangle jaune en premier
-        pygame.draw.rect(fenetre.ecran, yellow, (10, 380, 380, 110), 0, 4)
+        pygame.draw.rect(self.fenetre.ecran, yellow, (10, 380, 380, 110), 0, 4)
         # Dessine à droite le rectangle blanc par-dessus
-        pygame.draw.rect(fenetre.ecran, white, (15, 385, 370, 100), 0, 4)
+        pygame.draw.rect(self.fenetre.ecran, white, (15, 385, 370, 100), 0, 4)
         # Dessine à gauche le rectangle gris clair par-dessus
-        pygame.draw.rect(fenetre.ecran, light_grey, (400, 380, 390, 110), 0, 4)
+        pygame.draw.rect(self.fenetre.ecran, light_grey, (400, 380, 390, 110), 0, 4)
 
         if self.attaquer == True:
             self.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
@@ -108,15 +150,15 @@ class Interface:
         
         # surbrillance du bouton si la souris est dessus
         if bouton.collidepoint(pos_souris):
-            pygame.draw.rect(fenetre.ecran, yellow, bouton)
+            pygame.draw.rect(self.fenetre.ecran, yellow, bouton)
         else:
-            pygame.draw.rect(fenetre.ecran, white, bouton)
+            pygame.draw.rect(self.fenetre.ecran, white, bouton)
             
         # ajouter le texte du bouton
         font = pygame.font.Font(pygame.font.get_default_font(), 16)
         text = font.render(f'{label}', True, black)
         text_rect = text.get_rect(center=(text_cx, text_cy))
-        fenetre.ecran.blit(text, text_rect)
+        self.fenetre.ecran.blit(text, text_rect)
         
         return bouton
     
@@ -129,19 +171,6 @@ class Interface:
             
             pygame.display.flip()
 
-    def retour(self, event, bouton_retour):
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if bouton_retour.collidepoint(event.pos):
-                self.attaquer = True
-                self.sac = True
-                self.utiliser_potion = False
-                self.utiliser_attaques = False
-            elif bouton_utiliser_potion.collidepoint(event.pos):
-                if self.nb_potions > 0:
-                    self.nb_potions -= 1
-
-            pygame.display.flip()
-
     def use_attaques(self, event, bouton_attaquer):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if bouton_attaquer.collidepoint(event.pos):
@@ -151,26 +180,4 @@ class Interface:
                 print("attaquer")
 
             pygame.display.flip()
-
-combat = Interface(300, 300, 400, 400, 'pokedex.json')
-
-bouton_attaquer = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, "Attaquer")
-bouton_sac = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Sac")
-bouton_utiliser_potion = combat.create_bouton(180, 90, 410, 390, 410 + 180/2, 390 + 90/2, f"Potions ({combat.nb_potions})")
-bouton_retour = combat.create_bouton(180, 90, 600, 390, 600 + 180/2, 390 + 90/2, "Retour")
-
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        else:
-            if combat.utiliser_potion or combat.utiliser_attaques:
-                combat.retour(event, bouton_sac)
-            else:
-                combat.use_sac(event, bouton_sac)
-                combat.use_attaques(event, bouton_attaquer)
-    combat.interface()
-
-pygame.quit()
 

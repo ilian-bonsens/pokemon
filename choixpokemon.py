@@ -51,7 +51,8 @@ class ChoixPokemon:
                             pokemon_nom = noms_pokemon[i].replace('.png', '')  # Enlever l'extension .png
                             print(f"Vous avez choisi {pokemon_nom} pour commencer la partie")
                             self.pokemon_selectionne = noms_pokemon[i]  # Store the selected Pokemon's name
-                            return "quitter"
+                            return "interface"
+
 
             # Affichage des éléments graphiques
             self.ecran.fill((255, 255, 255))
