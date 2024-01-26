@@ -28,6 +28,7 @@ class Pokedex:
         self.spd_coords = (100, 525)
         self.name_coords = (400, 80)  # Ajoutez les coordonnées pour "name"
         self.attacks_coords = [(350, 431 + i*int(0.05 * window_size[1])) for i in range(4)]  # Créez une liste de coordonnées pour chaque attaque
+        self.id_coords = (350, 230)  # Ajoutez ceci pour définir les coordonnées de l'ID
 
     def get_pokemon(self, name):
         return self.pokedex.get(name, None)
@@ -109,6 +110,9 @@ while running:
         for info, coords in info_list:
             text = font.render(info, True, (0, 0, 0))
             screen.blit(text, coords)
+
+        id_text = font.render(str(stats['id']), True, (0, 0, 0))  # Créez un texte avec l'ID du Pokémon
+        screen.blit(id_text, pokedex.id_coords)  # Affichez l'ID aux coordonnées spécifiées
 
     # Jouer le cri du Pokémon sélectionné seulement s'il a changé
     if pokemon_index != last_pokemon_index:

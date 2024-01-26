@@ -1,6 +1,7 @@
 {
   "Pikachu": {
     "type" : "image-l/Type_Electrik.png",
+    "id" : "ID: 1",
     "hp" : 35,
     "attack" : 55,
     "defense" : 40,
@@ -37,6 +38,7 @@
   },
   "Bulbizarre": {
     "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 2",
     "hp": 45,
     "attack": 49,
     "defense": 49,
@@ -63,6 +65,7 @@
   },
    "Herbizarre": {
     "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 3",
     "hp": 60,
     "attack": 62,
     "defense": 63,
@@ -94,6 +97,7 @@
   },
   "Florizarre": {
     "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 4",
     "hp": 80,
     "attack": 82,
     "defense": 83,
@@ -130,6 +134,7 @@
   },
   "Salameche": {
     "type": "image-l/Type_Feu.png",
+    "id" : "ID: 5",
     "hp": 39,
     "attack": 52,
     "defense": 43,
@@ -156,6 +161,7 @@
   },
   "Reptincel": {
     "type": "image-l/Type_Feu.png",
+    "id" : "ID: 6",
     "hp": 58,
     "attack": 64,
     "defense": 58,
@@ -187,6 +193,7 @@
     },
     "Dracaufeu": {
       "type": "image-l/Type_dfv.png",
+      "id" : "ID: 7",
       "hp": 78,
       "attack": 84,
       "defense": 78,
@@ -223,6 +230,7 @@
     },
     "Carapuce": {
       "type": "image-l/Type_Eau.png",
+      "id" : "ID: 8",
       "hp": 44,
       "attack": 48,
       "defense": 65,
@@ -249,6 +257,7 @@
     },
     "Carabaffe": {
       "type": "image-l/Type_Eau.png",
+      "id" : "ID: 9",
       "hp": 59,
       "attack": 63,
       "defense": 80,
@@ -280,6 +289,7 @@
     },
     "Tortank": {
       "type": "image-l/Type_Eau.png",
+      "id" : "ID: 10",
       "hp": 79,
       "attack": 83,
       "defense": 100,
