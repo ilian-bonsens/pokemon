@@ -3,6 +3,7 @@ from menu import Menu
 from personnage import Personnage
 from fenetre import Fenetre
 from choixpokemon import ChoixPokemon
+from ajouterpokemon import AjouterPokemon
 
 class Jeu:
     def __init__(self):
@@ -20,6 +21,9 @@ class Jeu:
             elif self.etat == "choixpokemon":
                 choix_pokemon = ChoixPokemon(self.fenetre.ecran)
                 self.etat = choix_pokemon.run()  # Exécute la sélection de Pokemon
+            elif self.etat == "ajouterpokemon":  # Nouvel état
+                ajouter_pokemon = AjouterPokemon()
+                self.etat = ajouter_pokemon.run()
             elif self.etat == "quitter":
                 break  # Sortie de la boucle si l'état est 'quitter'
 

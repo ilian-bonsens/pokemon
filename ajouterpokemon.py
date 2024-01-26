@@ -4,7 +4,7 @@ import sys
 class AjouterPokemon:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((800, 600))
+        self.screen = pygame.display.set_mode((800, 500))
         self.screen.fill((255, 255, 255))  # Fond blanc
         self.pokemon_images = [pygame.image.load(f'imagesM/{name}.png') for name in ['arbok', 'empiflor', 'Grodoudou', 'kadabra', 'mélodelfe', 'nidorina', 'papillusion', 'Raflesia', 'rattata', 'Roucoups', 'sabelette', 'saquedeneu']]
         self.selected_pokemon = None
@@ -13,7 +13,7 @@ class AjouterPokemon:
         image_width = self.pokemon_images[0].get_width()
         image_height = self.pokemon_images[0].get_height()
         gap_x = (800 - 4 * image_width) / 5
-        gap_y = (600 - 3 * image_height) / 4
+        gap_y = (500 - 3 * image_height) / 4
 
         for i in range(3):
             for j in range(4):
@@ -38,6 +38,7 @@ class AjouterPokemon:
                     if self.selected_pokemon is not None:
                         pokemon_name = ['arbok', 'empiflor', 'Grodoudou', 'kadabra', 'mélodelfe', 'nidorina', 'papillusion', 'Raflesia', 'rattata', 'Roucoups', 'sabelette', 'saquedeneu'][self.selected_pokemon]
                         print(f"Le pokémon {pokemon_name} est ajouté.")
+                        return "menu"
 
             self.draw_grid()
             pygame.display.update()
@@ -46,7 +47,7 @@ class AjouterPokemon:
         image_width = self.pokemon_images[0].get_width()
         image_height = self.pokemon_images[0].get_height()
         gap_x = (800 - 4 * image_width) / 5
-        gap_y = (600 - 3 * image_height) / 4
+        gap_y = (500 - 3 * image_height) / 4
 
         for i in range(3):
             for j in range(4):

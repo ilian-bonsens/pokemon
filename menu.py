@@ -66,6 +66,8 @@ class Menu:
                     x, y = pygame.mouse.get_pos()
                     if 300 <= x <= 500 and 200 <= y <= 250:
                         return "personnage"
+                    elif 300 <= x <= 500 and 300 <= y <= 350:  # Nouvelle condition pour "Ajouter un Pokémon"
+                        return "ajouterpokemon"
                     
             self.bgX -= 0.2  # Ajustez cette valeur pour changer la vitesse de défilement
             self.draw_background()

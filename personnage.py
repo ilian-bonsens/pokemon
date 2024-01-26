@@ -89,7 +89,7 @@ class Personnage:
 
                 elif event.type == pygame.KEYDOWN:
                         if event.key == pygame.K_RETURN:
-                            print(f"Bienvenue dans la partie {text}!")
+                            print(f"Bienvenue dans la partie {text} !")
                             return "choixpokemon" # Retourne un nouveau statut lorsqu'Entrée est pressée
                         elif event.key == pygame.K_BACKSPACE:
                             text = text[:-1]
