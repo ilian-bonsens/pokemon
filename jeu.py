@@ -4,6 +4,7 @@ from personnage import Personnage
 from fenetre import Fenetre
 from choixpokemon import ChoixPokemon
 from ajouterpokemon import AjouterPokemon
+from pokedex import Pokedex
 
 class Jeu:
     def __init__(self):
@@ -24,6 +25,9 @@ class Jeu:
             elif self.etat == "ajouterpokemon":  # Nouvel état
                 ajouter_pokemon = AjouterPokemon()
                 self.etat = ajouter_pokemon.run()
+            elif self.etat == "pokedex":  # Gérer l'état 'pokedex'
+                pokedex = Pokedex(self.fenetre.ecran)
+                self.etat = pokedex.run()
             elif self.etat == "quitter":
                 break  # Sortie de la boucle si l'état est 'quitter'
 

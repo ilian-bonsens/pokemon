@@ -68,8 +68,10 @@ class Menu:
                         return "personnage"
                     elif 300 <= x <= 500 and 300 <= y <= 350:  # Nouvelle condition pour "Ajouter un Pokémon"
                         return "ajouterpokemon"
+                    elif 300 <= x <= 500 and 400 <= y <= 450:  # Si l'utilisateur clique sur "Ouvrir le Pokédex"
+                        return "pokedex"  # Retournez 'pokedex'
                     
-            self.bgX -= 0.2  # Ajustez cette valeur pour changer la vitesse de défilement
+            self.bgX -= 0.4  # Ajustez cette valeur pour changer la vitesse de défilement
             self.draw_background()
             titre = self.titre()
             largeur_titre, _ = titre.get_size()
@@ -79,7 +81,7 @@ class Menu:
             self.cases(300, 200, (0, 0, 0), "Lancer la partie")
             self.cases(300, 300, (0, 0, 0), "Ajouter un Pokémon")
             self.cases(300, 400, (0, 0, 0), "Ouvrir le Pokédex")
-            self.time += 0.02
+            self.time += 0.03
 
             pygame.display.flip()
 
