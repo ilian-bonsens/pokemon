@@ -53,7 +53,6 @@ class ChoixPokemon:
                             self.pokemon_selectionne = noms_pokemon[i]  # Store the selected Pokemon's name
                             return "interface"
 
-
             # Affichage des éléments graphiques
             self.ecran.fill((255, 255, 255))
             self.ecran.blit(fond, (0, 0))
@@ -67,4 +66,4 @@ class ChoixPokemon:
             pygame.display.flip()
             pygame.time.Clock().tick(30)
             
-        return "quitter"
+        return "interface"
