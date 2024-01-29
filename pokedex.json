@@ -1,0 +1,331 @@
+{
+  "Pikachu": {
+    "type" : "image-l/Type_Electrik.png",
+    "id" : "ID: 1",
+    "hp" : 35,
+    "attack" : 55,
+    "defense" : 40,
+    "speed" : 90,
+    "sprite-face": "sprites-pokemon/pikachu-face.png",
+    "sprite-dos": "sprites-pokemon/pikachu-back.png",
+    "cri": "cri-pokemon/pikachu.ogg",
+    "axe x": 160,
+    "axe y": 270,
+    "axe x2": 560,
+    "axe y2": 150,
+    "attacks" : [
+      {
+        "name" : "Vive_attack",
+        "type" : "Normal",
+        "power" : 40
+      },
+      {
+        "name" : "Eclair",
+        "type" : "Electrik",
+        "power" : 40
+      },
+      {
+        "name" : "Charge",
+        "type" : "Normal",
+        "power" : 40
+      },
+      {
+        "name" : "Frotte_Frimousse",
+            "type" : "Electrik",
+        "power" : 20
+      }
+    ]
+  },
+  "Bulbizarre": {
+    "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 2",
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "speed": 45,
+    "sprite-face": "sprites-pokemon/bulbasaur-face.png",
+    "sprite-dos": "sprites-pokemon/bulbasaur-back.png",
+    "cri": "cri-pokemon/Bulbizarre.ogg",
+    "axe x": 160,
+    "axe y": 270,
+    "axe x2": 505,
+    "axe y2": 115,
+    "attacks": [
+      {
+        "name": "Charge",
+        "type": "Normal",
+        "power": 40
+      },
+      {
+        "name": "Foue_Lianes",
+        "type": "Plante",
+        "power": 45
+      }
+    ]
+  },
+   "Herbizarre": {
+    "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 3",
+    "hp": 60,
+    "attack": 62,
+    "defense": 63,
+    "speed": 60,
+    "sprite-face": "sprites-pokemon/ivysaur-face.png",
+    "sprite-dos": "sprites-pokemon/ivysaur-back.png",
+    "cri": "cri-pokemon/Herbizarre.ogg",
+    "axe x": 160,
+    "axe y": 270,
+    "axe x2": 505,
+    "axe y2": 115,
+    "attacks": [
+      {
+        "name": "Tranch_Herbe",
+        "type": "Plante",
+        "power": 55
+      },
+      {
+        "name": "Charge",
+        "type": "Normal",
+        "power": 40
+      },
+      {
+        "name": "Faux_Coup",
+        "type": "Normal",
+        "power": 40
+      }
+    ]
+  },
+  "Florizarre": {
+    "type": "image-l/Type_Dpp.png",
+    "id" : "ID: 4",
+    "hp": 80,
+    "attack": 82,
+    "defense": 83,
+    "speed": 80,
+    "sprite-face": "sprites-pokemon/venusaur-face.png",
+    "sprite-dos": "sprites-pokemon/venusaur-back.png",
+    "cri": "cri-pokemon/Florizarre.ogg",
+    "axe x": 105,
+    "axe y": 230,
+    "axe x2": 505,
+    "axe y2": 95,
+    "attacks": [
+      {
+        "name": "Tempete_Florale",
+        "type": "Plante",
+        "power": 90
+      },
+      {
+        "name": "Lance_Soleil",
+        "type": "Plante",
+        "power": 120
+      },
+      {
+        "name": "Bombe_Beurk",
+        "type": "Poison",
+        "power": 90
+      },
+      {
+        "name": "Damocles",
+        "type": "Normal",
+        "power": 120
+      }
+    ]
+  },
+  "Salameche": {
+    "type": "image-l/Type_Feu.png",
+    "id" : "ID: 5",
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "speed": 65,
+    "sprite-face": "sprites-pokemon/charmander-face.png",
+    "sprite-dos": "sprites-pokemon/charmander-back.png",
+    "cri": "cri-pokemon/Salameche.ogg",
+    "axe x": 155,
+    "axe y": 265,
+    "axe x2": 505,
+    "axe y2": 100,
+    "attacks": [
+      {
+        "name": "Griffe",
+        "type": "Normal",
+        "power": 40
+      },
+      {
+        "name": "Flammeche",
+        "type": "Feu",
+        "power": 40
+      }
+    ]
+  },
+  "Reptincel": {
+    "type": "image-l/Type_Feu.png",
+    "id" : "ID: 6",
+    "hp": 58,
+    "attack": 64,
+    "defense": 58,
+    "speed": 80,
+    "sprite-face": "sprites-pokemon/charmeleon-face.png",
+    "sprite-dos": "sprites-pokemon/charmeleon-back.png",
+    "cri": "cri-pokemon/Reptincel.ogg",
+    "axe x": 100,
+    "axe y": 230,
+    "axe x2": 510,
+    "axe y2": 95,
+    "attacks": [
+        {
+          "name": "Griffe",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Crocs_Feu",
+          "type": "Feu",
+          "power": 65
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
+        }
+      ]
+    },
+    "Dracaufeu": {
+      "type": "image-l/Type_dfv.png",
+      "id" : "ID: 7",
+      "hp": 78,
+      "attack": 84,
+      "defense": 78,
+      "speed": 100,
+      "sprite-face": "sprites-pokemon/charizard-face.png",
+      "sprite-dos": "sprites-pokemon/charizard-back.png",
+      "cri": "cri-pokemon/Dracaufeu.ogg",
+      "axe x": 60,
+      "axe y": 190,
+      "axe x2": 505,
+      "axe y2": 75,
+      "attacks": [
+        {
+          "name": "Lame_dair",
+          "type": "vol",
+          "power": 75
+        },
+        {
+          "name": "Lance_Flamme",
+          "type": "Feu",
+          "power": 90
+        },
+        {
+          "name": "Boutefeu",
+          "type": "Feu",
+          "power": 120
+        },
+        {
+          "name": "Tranche",
+          "type": "Normal",
+          "power": 70
+        }
+      ]
+    },
+    "Carapuce": {
+      "type": "image-l/Type_Eau.png",
+      "id" : "ID: 8",
+      "hp": 44,
+      "attack": 48,
+      "defense": 65,
+      "speed": 43,
+      "sprite-face": "sprites-pokemon/squirtle-face.png",
+      "sprite-dos": "sprites-pokemon/squirtle-back.png",
+      "cri": "cri-pokemon/Carapuce.ogg",
+      "axe x": 160,
+      "axe y": 265,
+      "axe x2": 505,
+      "axe y2": 110,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Pistolet_a_O",
+          "type": "Eau",
+          "power": 40
+        }
+      ]
+    },
+    "Carabaffe": {
+      "type": "image-l/Type_Eau.png",
+      "id" : "ID: 9",
+      "hp": 59,
+      "attack": 63,
+      "defense": 80,
+      "speed": 58,
+      "sprite-face": "sprites-pokemon/wartortle-face.png",
+      "sprite-dos": "sprites-pokemon/wartortle-back.png",
+      "cri": "cri-pokemon/Carabaffe.ogg",
+      "axe x": 145,
+      "axe y": 225,
+      "axe x2": 505,
+      "axe y2": 90,
+      "attacks": [
+        {
+          "name": "Charge",
+          "type": "Normal",
+          "power": 40
+        },
+        {
+          "name": "Vibraqua",
+          "type": "Eau",
+          "power": 60
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
+        }
+      ]
+    },
+    "Tortank": {
+      "type": "image-l/Type_Eau.png",
+      "id" : "ID: 10",
+      "hp": 79,
+      "attack": 83,
+      "defense": 100,
+      "speed": 78,
+      "sprite-face": "sprites-pokemon/blastoise-face.png",
+      "sprite-dos": "sprites-pokemon/blastoise-back.png",
+      "cri": "cri-pokemon/Tortank.ogg",
+      "axe x": 135,
+      "axe y": 225,
+      "axe x2": 500,
+      "axe y2": 90,
+      "attacks": [
+        {
+          "name": "Hydro_Queue",
+          "type": "Eau",
+          "power": 90
+        },
+        {
+          "name": "Hydrocanon",
+          "type": "Eau",
+          "power": 110
+        },
+        {
+          "name": "Morsure",
+          "type": "Dark",
+          "power": 60
+        },
+        {
+          "name": "Vibraqua",
+          "type": "Eau",
+          "power": 60
+        }
+      ]
+    }
+  }
+
+
+
+
