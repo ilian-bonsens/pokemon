@@ -1,0 +1,20 @@
+{
+    "Lanceflamme": {"type": "Special", "element": "Feu", "power": 90},
+    "Tranche": {"type": "Physique", "element": "Normal", "power": 70},
+    "Lame_dair": {"type": "Special", "element": "Vol", "power": 75},
+    "Boutefeu": {"type": "Physique", "element": "Feu", "power": 120},
+    "Hydro_queue": {"type": "Physique", "element": "Eau", "power": 90},
+    "Vibraqua": {"type": "Special", "element": "Eau", "power": 60},
+    "Morsure": {"type": "Physique", "element": "Tenebre", "power": 60},
+    "Tour_rapide": {"type": "Physique", "element": "Normal", "power": 50},
+    "Canon_graine": {"type": "Physique", "element": "Plante", "power": 60},
+    "Bombe_Beurk": {"type": "Special", "element": "Poison", "power": 90},
+    "Coupe_feuille": {"type": "Physique", "element": "Plante", "power": 55},
+    "Damoclès": {"type": "Physique", "element": "Normal", "power": 120},
+    "Fouet_Lianes": {"type": "Physique", "element": "Plante", "power": 45},
+    "Faux_Coup": {"type": "Physique", "element": "Normal", "power": 40},
+    "Pistolet_a_O": {"type": "Special", "element": "Eau", "power": 40},
+    "Charge": {"type": "Physique", "element": "Normal", "power": 40},
+    "Crocs_Feu": {"type": "Physique", "element": "Feu", "power": 65},
+    "Flammeche": {"type": "Special", "element": "Feu", "power": 40}
+}
