@@ -176,6 +176,7 @@ class Interface:
             if bouton_attaquer.collidepoint(event.pos):
                 self.attaquer = False
                 self.sac = False
+                self.utiliser_potion = False
                 self.utiliser_attaques = True
                 print("attaquer")
 
