@@ -16,7 +16,7 @@ yellow = (222, 193, 96)
 
 # Charger le fichier JSON
 with open('pokedex.json', encoding='utf-8') as f:
-        data = json.load(f)
+    data = json.load(f)
 
 # Récupérer les attaques du Pokémon
 pokemon = data["Pikachu"]
