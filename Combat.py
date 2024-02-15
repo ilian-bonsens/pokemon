@@ -34,7 +34,6 @@ class Pokemon:
             print(f"{self.nom} a atteint son évolution finale.")
             self.evolutions.pop(self.nom, None)  # Retirer le Pokémon du dictionnaire des évolutions
 
-
 class Move:
     def __init__(self, name, form, typ, pwr):
         self.name = name
@@ -70,8 +69,6 @@ Hydrocanon = Move("Hydrocanon", "special", "Eau", 120)
 Vive_Attaque = Move("Vive_Attaque", "physique", "Normal", 40)
 Frotte_Frimousse = Move("Frotte_Frimousse", "physique", "Electrik", 20)
 
-
-
 #Pokemon stats + attaque
 
 Pok1 = Pokemon("Salamèche", "Feu", None, 39, 56, 47, 60, 50, 65, Flammeche, Charge, None,None)
@@ -97,7 +94,6 @@ attaques_potentielles_Pok7 = [Faux_Coup]
 attaques_potentielles_Pok8 = [Damocles]
 attaques_potentielles_Pok9 = [Canon_graine]
 
-
 # Assignation des attaques potentielles à chaque Pokemon
 Pok1.attaques_potentielles = attaques_potentielles_Pok1
 Pok2.attaques_potentielles = attaques_potentielles_Pok2
@@ -116,7 +112,6 @@ pokemons = [Pok1, Pok2, Pok3, Pok4, Pok5, Pok6, Pok7, Pok8, Pok9]
 for pokemon in pokemons:
     for _ in range(4):
         pokemon.gagner_combat()  # Après ces combats, chaque Pokemon devrait apprendre une nouvelle attaque
-
 
 def PokAttack(pok1, pok2, move):
     critChance = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5]
