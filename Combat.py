@@ -1,6 +1,7 @@
 import random
 
 class Pokemon:
+    # initialise les stats de base de chaque Pokemon
     def __init__(self, nom, type1, type2, pv, atk, df, atkspe, dfspe, vit, attaque1, attaque2, attaque3, attaque4, combats_gagnes=0):
         self.nom = nom
         self.type1 = type1
