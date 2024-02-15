@@ -2,17 +2,18 @@ import pygame
 
 class Personnage:
     def __init__(self, ecran):
-        self.ecran = ecran
-        self.nom = None
-        self.image_path = None
-        self.image = None
-        self.personnage_selectionne = None # Variable pour suivre le personnage sélectionné
-
-    def run(self):         
+        self.ecran = ecran # L'écran sur lequel les éléments seront dessinés
+        self.nom = None # Le nom du personnage sélectionné
+        self.image_path = None # Le chemin vers l'image du personnage sélectionné
+        self.image = None # L'objet image du personnage sélectionné
+        self.personnage_selectionne = None # Suivi du personnage sélectionné
+    
+    def run(self): # Configuration de la fenêtre       
         taille_fenetre = (800, 600)
         fond = pygame.image.load('imagesM/img11.png')
         fond = pygame.transform.scale(fond, taille_fenetre)
 
+        # Configuration de la musique de fond
         pygame.mixer.music.load('musiqueM/Pokemonmusic1.mp3')
         pygame.mixer.music.play(-1)
 
@@ -58,19 +59,20 @@ class Personnage:
         input_box_y = 350 + 30
         input_box = pygame.Rect(input_box_x, input_box_y, input_box_width, input_box_height)
 
-        # Boucle principale
+        # Boucle principale du jeu pour la sélection du personnage et la saisie du nom
         running = True
         while running:
             for event in pygame.event.get():
-                if event.type == pygame.QUIT:
+                if event.type == pygame.QUIT: # Si l'utilisateur ferme la fenêtre
                     return "quitter"
                 elif event.type == pygame.MOUSEBUTTONDOWN:
-                    # Gestion de la sélection de la zone de texte
+                    # Si l'utilisateur clique dans la zone de saisie, elle devient active/inactive
                     if input_box.collidepoint(event.pos):
                         active = not active
                     else:
                         active = False
                     
+                    # Sélection du personnage via un clic de souris
                     x, y = pygame.mouse.get_pos()
                     if fille_rect.collidepoint(x, y):
                         self.nom = 'fille'
@@ -94,7 +96,7 @@ class Personnage:
                         elif event.key == pygame.K_BACKSPACE:
                             text = text[:-1]
                         else:
-                            text += event.unicode
+                            text += event.unicode # Ajouter le caractère saisi
 
             # Affichage des éléments graphiques
             self.ecran.fill((255, 255, 255))
@@ -119,7 +121,7 @@ class Personnage:
             if self.personnage_selectionne is not None:
                 pygame.draw.rect(self.ecran, color_active, self.personnage_selectionne, 2)
             
-
+            # Mise à jour de l'affichage et contrôle de la fréquence de la boucle
             pygame.display.flip()
             pygame.time.Clock().tick(30)
             
