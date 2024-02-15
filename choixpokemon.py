@@ -2,18 +2,21 @@ import pygame
 
 class ChoixPokemon:
     def __init__(self, ecran):
-        self.ecran = ecran
-        self.pokemon_selectionne = None # Variable pour suivre le Pokémon sélectionné
+        # Initialisation de l'écran sur lequel les éléments graphiques seront affichés
+        self.ecran = ecran 
+        # Initialisation de la variable qui gardera en mémoire le Pokémon sélectionné par l'utilisateur
+        self.pokemon_selectionne = None
 
-    def run(self):        
+    def run(self): # Méthode principale qui lance l'interface de choix de Pokémon
         taille_fenetre = (800, 600)
         fond = pygame.image.load('imagesM/fond3.png')
         fond = pygame.transform.scale(fond, taille_fenetre)
 
+        # Chargement et lecture en boucle de la musique de fond
         pygame.mixer.music.load('musiqueM/Pokemonmusic1.mp3')
         pygame.mixer.music.play(-1)
 
-        # Chargement de l'image du titre
+        # Chargement de l'image du titre, ajustement de sa taille et positionnement au centre en haut
         titre = pygame.image.load('imagesM/txt3.png')
         rapport = 550 / titre.get_width()
         nouvelle_hauteur = int(titre.get_height() * rapport)
@@ -36,11 +39,13 @@ class ChoixPokemon:
             rect = images_pokemon[i].get_rect(topleft=(x, 150))
             pokemon_rects.append(rect)
 
+        # Couleur utilisée pour indiquer le Pokémon sélectionné
         color_active = pygame.Color(255, 0, 0)
 
-        # Boucle principale
+        # Boucle principale de l'interface
         running = True
         while running:
+            # Gestion des événements (fermeture de la fenêtre, clics de souris)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     return "quitter"
@@ -53,17 +58,17 @@ class ChoixPokemon:
                             self.pokemon_selectionne = noms_pokemon[i]  # Store the selected Pokemon's name
                             return "interface"
 
-            # Affichage des éléments graphiques
+            # Mise à jour de l'affichage de l'interface
             self.ecran.fill((255, 255, 255))
             self.ecran.blit(fond, (0, 0))
             self.ecran.blit(titre, titre_rect)
             for rect, img in zip(pokemon_rects, images_pokemon):
                 self.ecran.blit(img, rect)
-
             if self.pokemon_selectionne is not None:
                 pygame.draw.rect(self.ecran, color_active, self.pokemon_selectionne, 2)
 
             pygame.display.flip()
+            # Limitation de la vitesse de la boucle à 30 images par seconde
             pygame.time.Clock().tick(30)
             
         return "interface"
